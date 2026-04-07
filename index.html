@@ -166,6 +166,175 @@
             align-items: center;
             gap: 10px;
         }
+/* 📸 Gallery Section - Liquid Glass Version */
+.gallery-section {
+    width: 100%;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 10; /* ดันให้ลอยเหนือพื้นหลัง */
+}
+
+.gallery-container {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    position: relative; /* สำคัญ: เพื่อให้ปุ่มอ้างอิงตำแหน่งได้ */
+}
+
+.gallery-wrapper {
+    display: flex;
+    overflow-x: hidden; 
+    scroll-behavior: smooth;
+    gap: 15px;
+}
+
+.gallery-item {
+    flex: 0 0 calc(33.333% - 10px);
+    min-width: 250px;
+    height: 200px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 3px solid white;
+}
+
+@media (max-width: 768px) {
+    .gallery-item { flex: 0 0 85%; }
+}
+
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; }
+
+/* 🔘 ปุ่มกดเลื่อน - แก้ไขให้ลอยอยู่บนรูปเสมอ */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    background: rgba(0, 31, 63, 0.8);
+    color: var(--gold);
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 100; /* ดันให้ปุ่มอยู่บนสุด */
+    transition: 0.3s;
+}
+<style>
+    /* 📸 ส่วนที่ 1: Showcase Gallery CSS */
+    .gallery-section {
+        width: 100%;
+        margin: 40px 0;
+        position: relative;
+        z-index: 10;
+    }
+
+    .gallery-container { 
+        background: rgba(255, 255, 255, 0.4) !important; 
+        backdrop-filter: blur(15px);
+        border-radius: 25px; 
+        border: 1px solid rgba(255, 255, 255, 0.5) !important; 
+        padding: 20px; 
+        position: relative; 
+        box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    }
+
+    .gallery-wrapper { 
+        display: flex; 
+        overflow-x: hidden; 
+        scroll-behavior: smooth; 
+        gap: 15px; 
+    }
+
+    .gallery-item { 
+        flex: 0 0 calc(33.333% - 10px); 
+        min-width: 250px; 
+        height: 200px; 
+        border-radius: 20px; 
+        overflow: hidden; 
+        border: 3px solid white; 
+        cursor: pointer; 
+        transition: 0.3s;
+    }
+
+    .gallery-item:hover { 
+        transform: scale(1.02); 
+        border-color: var(--gold); 
+        box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+    }
+
+    .gallery-item img { 
+        width: 100%; 
+        height: 100%; 
+        object-fit: cover; 
+    }
+
+    /* 🔘 ปุ่มกดเลื่อน - ลอยอยู่ซ้ายขวาของกล่อง */
+    .nav-btn {
+        position: absolute; 
+        top: 50%; 
+        transform: translateY(-50%);
+        width: 45px; 
+        height: 45px; 
+        background: rgba(0, 31, 63, 0.85);
+        color: var(--gold); 
+        border: 2px solid var(--gold); 
+        border-radius: 50%;
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        cursor: pointer; 
+        z-index: 100;
+        transition: 0.3s;
+    }
+
+    .nav-btn:hover { 
+        background: var(--gold); 
+        color: var(--navy); 
+        box-shadow: 0 0 15px var(--gold);
+    }
+
+    .prev-btn { left: -15px; } 
+    .next-btn { right: -15px; }
+
+ /* 🔍 Full View Image Layer */
+#gallery-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(15px);
+    z-index: 3000; /* อยู่บนสุดเหนือทุกอย่าง */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+}
+
+#gallery-overlay img {
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 15px;
+    border: 3px solid var(--gold);
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+    transition: 0.3s;
+}
+
+.close-gallery {
+    position: absolute;
+    top: 20px; right: 30px;
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+</style>
+
+.nav-btn:hover { background: var(--gold); color: var(--navy); }
+.prev-btn { left: -10px; } /* ขยับออกนอกขอบนิดหน่อยให้กดง่าย */
+.next-btn { right: -10px; }
     </style>
 </head>
 <body>
@@ -188,7 +357,57 @@
         <div class="ticker-item"><i class="bi bi-telephone-fill"></i> Call Center: 02-5673246 | Line: 081-499-3724</div>
         </div>
     </div>
-
+<div class="container gallery-section">
+    <h3 class="fw-bold text-navy mb-3"><i class="bi bi-stars"></i>รับงานติดตั้งโซล่าเซล</h3>
+    <div class="gallery-container shadow-sm">
+        
+        <div class="nav-btn prev-btn" onclick="manualSlide(-1)"><i class="bi bi-chevron-left"></i></div>
+        <div class="nav-btn next-btn" onclick="manualSlide(1)"><i class="bi bi-chevron-right"></i></div>
+        
+        <div class="gallery-wrapper" id="galleryScroll">
+            <div class="gallery-item" onclick="viewFullImage('https://i.postimg.cc/90mbNcFB/408076.jpg')">
+                <img src="https://i.postimg.cc/90mbNcFB/408076.jpg" alt="Showcase 1">
+            </div>
+            <div class="gallery-item" onclick="viewFullImage('https://i.postimg.cc/J0rxdR4q/408077.jpg')">
+                <img src="https://i.postimg.cc/J0rxdR4q/408077.jpg" alt="Showcase 2">
+            </div>
+            <div class="gallery-item" onclick="viewFullImage('https://i.postimg.cc/VvfgHzLW/408078.jpg')">
+                <img src="https://i.postimg.cc/VvfgHzLW/408078.jpg" alt="Showcase 3">
+            </div>
+            <div class="gallery-item" onclick="viewFullImage('https://i.postimg.cc/D0v6Y7yQ/408079.jpg')">
+                <img src="https://i.postimg.cc/D0v6Y7yQ/408079.jpg" alt="Showcase 4">
+            </div>
+            <div class="gallery-item" onclick="viewFullImage('https://i.postimg.cc/90mbNcFL/408080.jpg')">
+                <img src="https://i.postimg.cc/90mbNcFL/408080.jpg" alt="Showcase 5">
+            </div>
+            <div class="gallery-item" onclick="viewFullImage('https://i.postimg.cc/C5h76wLm/408081.jpg')">
+                <img src="https://i.postimg.cc/C5h76wLm/408081.jpg" alt="Showcase 6">
+            </div>
+            <div class="gallery-item" onclick="viewFullImage('https://i.postimg.cc/3N81b3JL/408082.jpg')">
+                <img src="https://i.postimg.cc/3N81b3JL/408082.jpg" alt="Showcase 7">
+            </div>
+            <div class="gallery-item" onclick="viewFullImage('https://i.postimg.cc/7hH9QqYs/408083.jpg')">
+                <img src="https://i.postimg.cc/7hH9QqYs/408083.jpg" alt="Showcase 8">
+            </div>
+            <div class="gallery-item" onclick="viewFullImage('https://i.postimg.cc/hvDs3KP3/408084.jpg')">
+                <img src="https://i.postimg.cc/hvDs3KP3/408084.jpg" alt="Showcase 9">
+            </div>
+            <div class="gallery-item" onclick="viewFullImage('https://i.postimg.cc/C5h76wLr/408085.jpg')">
+                <img src="https://i.postimg.cc/C5h76wLr/408085.jpg" alt="Showcase 10">
+            </div>
+            <div class="gallery-item" onclick="viewFullImage('https://i.postimg.cc/x8f5F9TZ/408086.jpg')">
+                <img src="https://i.postimg.cc/x8f5F9TZ/408086.jpg" alt="Showcase 11">
+            </div>
+            <div class="gallery-item" onclick="viewFullImage('https://i.postimg.cc/T1d0HTYS/408087.jpg')">
+                <img src="https://i.postimg.cc/T1d0HTYS/408087.jpg" alt="Showcase 12">
+            </div>
+        </div>
+    </div>
+</div>
+<div id="gallery-overlay" onclick="this.style.display='none'">
+    <span class="close-gallery">&times;</span>
+    <img id="full-image-src" src="">
+</div>
     <div class="container mt-4 pb-5">
         <div class="row">
             <aside class="col-lg-3">
@@ -378,7 +597,21 @@
             document.getElementById('detail-overlay').style.display = 'none';
             document.body.style.overflow = 'auto';
         }
-
+function manualSlide(direction) {
+    const el = document.getElementById('galleryScroll');
+    if (el) {
+        // เลื่อนไปตามความกว้างของรูปภาพ
+        const scrollAmount = el.clientWidth / 1.5; 
+        el.scrollLeft += (direction * scrollAmount);
+    }
+}
+// ฟังก์ชันสำหรับดูรูปใหญ่
+function viewFullImage(imgUrl) {
+    const overlay = document.getElementById('gallery-overlay');
+    const fullImg = document.getElementById('full-image-src');
+    fullImg.src = imgUrl;
+    overlay.style.display = 'flex';
+}
         window.onload = init;
     </script>
 </body>
