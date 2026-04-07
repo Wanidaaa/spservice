@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SP Service - Trend Market</title>
+    <title>SP Service</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/gcS5k03c/Gemini-Generated-Image-sbm4sjsbm4sjsbm4-removebg-preview.png">
     <style>
         :root { --gold: #D4AF37; --navy: #001f3f; --accent-red: #8B0000; }
         
@@ -131,6 +131,41 @@
             /* เวลา hover ให้ Glow ขาวชัดขึ้นอีก */
             filter: drop-shadow(0 0 20px rgba(255, 255, 255, 1)); 
         }
+        /* 📢 ปรับปรุงแถบวิ่งให้ Smooth และเร็วเท่ากันทุกอุปกรณ์ */
+        .news-ticker {
+            background: rgba(212, 175, 55, 0.15) !important;
+            backdrop-filter: blur(12px) saturate(150%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            color: var(--navy);
+            padding: 10px 0;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            z-index: 1040;
+        }
+
+        .ticker-content {
+            display: flex;
+            white-space: nowrap;
+            /* ใช้แอนิเมชั่นแบบ Linear และระบุเวลาที่เหมาะสม */
+            animation: ticker-smooth 30s linear infinite;
+        }
+
+        /* เทคนิคทำให้วิ่งต่อเนื่องไม่สะดุด */
+        @keyframes ticker-smooth {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); } /* วิ่งไปครึ่งหนึ่งของเนื้อหาที่ซ้ำกัน */
+        }
+
+        .ticker-item {
+            padding: 0 40px;
+            font-weight: bold;
+            font-size: 0.95rem;
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
     </style>
 </head>
 <body>
@@ -142,6 +177,17 @@
             <a href="contact.html" class="btn btn-outline-warning fw-bold rounded-pill px-4">ติดต่อเรา</a>
         </div>
     </header>
+    <div class="news-ticker shadow-sm">
+    <div class="ticker-content">
+        <div class="ticker-item"><i class="bi bi-megaphone-fill text-danger"></i> ยินดีต้อนรับสู่ SP Service: ศูนย์รวมโซล่าเซลล์ และ Trend Market!</div>
+        <div class="ticker-item"><i class="bi bi-lightning-charge-fill text-warning"></i> รับติดตั้งและจำหน่ายอุปกรณ์โซล่าเซลล อุปกรณ์ไฟฟ้าอิเลคทรอนิกส์ สื่อสาร CCTV NETWORK</div>
+        <div class="ticker-item"><i class="bi bi-telephone-fill"></i> Call Center: 02-5673246 | Line: 081-499-3724</div>
+        
+        <div class="ticker-item"><i class="bi bi-megaphone-fill text-danger"></i> ยินดีต้อนรับสู่ SP Service: ศูนย์รวมโซล่าเซลล์ และ Trend Market!</div>
+        <div class="ticker-item"><i class="bi bi-lightning-charge-fill text-warning"></i> รับติดตั้งและจำหน่ายอุปกรณ์โซล่าเซลล อุปกรณ์ไฟฟ้าอิเลคทรอนิกส์ สื่อสาร CCTV NETWORK</div>
+        <div class="ticker-item"><i class="bi bi-telephone-fill"></i> Call Center: 02-5673246 | Line: 081-499-3724</div>
+        </div>
+    </div>
 
     <div class="container mt-4 pb-5">
         <div class="row">
