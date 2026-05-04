@@ -333,6 +333,20 @@
 .nav-btn:hover { background: var(--gold); color: var(--navy); }
 .prev-btn { left: -10px; } /* ขยับออกนอกขอบนิดหน่อยให้กดง่าย */
 .next-btn { right: -10px; }
+/* ป้าย Best Seller */
+.badge-best {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #ffc107; /* สีเหลืองทอง */
+    color: #000;
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    z-index: 5;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
 </style>
     </style>
 </head>
@@ -352,8 +366,8 @@
         <div class="ticker-item"><i class="bi bi-telephone-fill"></i> Call Center: 02-5673246 | Line: 081-499-3724</div>
         
         <div class="ticker-item"><i class="bi bi-megaphone-fill text-danger"></i> รับเขียนโปรแกรม เว็บแอปพลิเคชัน เว็บไซต์และออกแบบหน้าจอทุกระบบ </div>
-        <div class="ticker-item"><i class="bi bi-lightning-charge-fill text-warning"></i> ติดต่อได้ที่ : thanomtorwor@gmail.com</div>
-        <div class="ticker-item"><i class="bi bi-telephone-fill"></i> Call Center: 02-5673246 | Line: 081-499-3724</div>
+        <div class="ticker-item"><i class="bi bi-lightning-charge-fill text-warning"></i> ติดต่อได้ที่ :thanomtorwor@gmail.com</div>
+        <div class="ticker-item"><i class="bi bi-telephone-fill"></i> Call Center: 02-5673246 | Line:081-499-3724</div>
         </div>
     </div>
 <div class="container gallery-section">
@@ -423,20 +437,28 @@
     </div>
 
     <footer class="footer-custom">
-        <div class="container">
-            <div class="row justify-content-center text-start">
-                <div class="col-md-5">
-                    <a href="mailto:boomtik04@gmail.com" class="social-link"><i class="bi bi-envelope-fill fs-3 text-danger"></i> Email: boomtik04@gmail.com</a>
-                    <a href="#" class="social-link"><i class="bi bi-line fs-3 text-success"></i> LINE ID: 081-499-3724</a>
-                </div>
-                <div class="col-md-5">
-                    <a href="#" class="social-link"><i class="bi bi-facebook fs-3 text-primary"></i> Facebook: SP Service</a>
-                    <a href="#" class="social-link"><i class="bi bi-phone-fill fs-3 text-dark"></i> Call Center: 02-5673246</a>
-                </div>
+    <div class="container">
+        <div class="row justify-content-center text-start">
+            <div class="col-md-5">
+                <a href="mailto: boomtik04@gmail.com?subject=ติดต่อสอบถามสินค้า&body=สวัสดีครับ ต้องการสอบถามเกี่ยวกับ..." class="social-link text-decoration-none d-block mb-2">
+                    <i class="bi bi-envelope-fill fs-3 text-danger"></i> Email: boomtik04@gmail.com
+                </a>
+                <a href="https://line.me/ti/p/~0814993724" target="_blank" class="social-link text-decoration-none d-block mb-2">
+                    <i class="bi bi-line fs-3 text-success"></i> LINE ID: 081-499-3724
+                </a>
             </div>
-            <p class="text-center mt-4 text-muted small"> หจก เอสพีแมนเนจเม้นท์ เลขที่ 21 ถ.รังสิต-ปทุมธานี12 ซอย13 ต.ประชาธิปัตย์ อ.ธัญบุรี จ.ปทุมธานี 12130<br>ทะเบียนภาษี 0553543000255</p>
+            <div class="col-md-5">
+                <a href="https://www.facebook.com/YOUR_PAGE_LINK" target="_blank" class="social-link text-decoration-none d-block mb-2">
+                    <i class="bi bi-facebook fs-3 text-primary"></i> Facebook: SP Service
+                </a>
+                <a href="tel:025673246" class="social-link text-decoration-none d-block mb-2">
+                    <i class="bi bi-phone-fill fs-3 text-dark"></i> Call Center:02-5673246
+                </a>
+            </div>
         </div>
-    </footer>
+        <p class="text-center mt-4 text-muted small"> หจก เอสพีแมนเนจเม้นท์ เลขที่ 21 ถ.รังสิต-ปทุมธานี12 ซอย13 ต.ประชาธิปัตย์ อ.ธัญบุรี จ.ปทุมธานี 12130<br>ทะเบียนภาษี 0553543000255</p>
+    </div>
+</footer>
 
     <div id="detail-overlay" onclick="closeDetail()">
         <div class="container h-100 d-flex align-items-center justify-content-center">
@@ -496,48 +518,58 @@
             { id: 601, cat: "cat-6", s: "Solar", n: "วงจรลดแรงดันแบบปรับค่าได้ DC-DC STEP DOWN 600W 25A BUCK CONVERTER ลดโวลต์ ไฟเข้า 12-75V ไฟออก 2.5-50V กระแสสูง 25A", p: "480.00", i: "https://down-th.img.susercontent.com/file/th-11134207-7r98r-lug8x0te8yem4a", d: "โมดูลปรับแรงดันไฟฟ้า", url: "contact.html" },
 
             // --- TREND MARKET (สินค้าดั้งเดิม 42 รายการ) ---
-            { id: 1, cat: "cat-trend", s: "Shopee", n: "Remax Power Bank ความจุ 15,000 mAh (W1501)", p: "710.00", i: "https://image.makewebcdn.com/makeweb/m_1920x0/ov2vKBOZn/DefaultData/fec2c185ff3a88c7372e6975b882fc80.jpg", d: "Power Bank ชาร์จไว มีปลั๊กในตัว", url: "https://shopee.co.th/" },
-            { id: 2, cat: "cat-trend", s: "Shopee", n: "เครื่องตัดผมไร้สายรุ่นใหม่ล่าสุด", p: "133.00", i: "https://down-th.img.susercontent.com/file/sg-11134201-7req4-m8pzy5679t95f1", d: "ตัดแต่งหนวดเคราและผม", url: "https://shopee.co.th/" },
-            { id: 3, cat: "cat-trend", s: "Shopee", n: "อะแดปเตอร์ชาร์จ PD Type C 65W GaN", p: "44.00", i: "https://down-th.img.susercontent.com/file/sg-11134201-7rbmq-lp55f0x2kv2e85", d: "Fast Charging สำหรับมือถือ", url: "https://shopee.co.th/" },
-            { id: 4, cat: "cat-trend", s: "Shopee", n: "PANASI ปลั๊กไฟ USB มาตรฐาน มอก.", p: "229.00", i: "https://down-th.img.susercontent.com/file/th-11134207-7rasa-m70axnoc3dh38f", d: "ปลั๊กพ่วงทนทาน ปลอดภัย", url: "https://shopee.co.th/" },
-            { id: 5, cat: "cat-trend", s: "Shopee", n: "Oscrop ชุดชาร์จวีโว่ 44W Super Fast Charge", p: "46.00", i: "https://down-th.img.susercontent.com/file/cn-11134207-820l4-miwu0gvgl81x3c", d: "ชุดชาร์จพร้อมสาย Type C", url: "https://shopee.co.th/" },
-            { id: 6, cat: "cat-trend", s: "Shopee", n: "ซิม GOMO รายปี 99 บาท เน็ต 10GB", p: "99.00", i: "https://th-test-11.slatic.net/p/b692b20d0be683efdbed97a6b611e3a1.jpg", d: "เน็ต AIS 5G คุ้มที่สุด", url: "https://shopee.co.th/" },
-            { id: 7, cat: "cat-trend", s: "Shopee", n: "Eloop Power Bank E53/EW55/EW54", p: "669.00", i: "https://down-th.img.susercontent.com/file/th-11134207-81ztd-mhg31gfjlc7637", d: "แบตสำรองคุณภาพยอดนิยม", url: "https://shopee.co.th/" },
-            { id: 8, cat: "cat-trend", s: "Shopee", n: "ขาตั้งกล้อง Smart Pro", p: "420.00", i: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500", d: "ปรับระดับได้ 360 องศา", url: "https://shopee.co.th/" },
-            { id: 9, cat: "cat-trend", s: "Shopee", n: "บราฟองน้ำบางพิเศษ Daisybra 1220", p: "246.00", i: "https://down-th.img.susercontent.com/file/th-11134207-7qul4-lgnhtp3zh82w29", d: "ใส่สบาย ระบายอากาศดี", url: "https://shopee.co.th/" },
-            { id: 10, cat: "cat-trend", s: "Shopee", n: "GQ Everyday Sports Shorts", p: "540.00", i: "https://down-th.img.susercontent.com/file/th-11134207-7rasi-m8ya4ym5ey4vbd", d: "กางเกงกีฬาแห้งไว", url: "https://shopee.co.th/" },
-            { id: 11, cat: "cat-trend", s: "Shopee", n: "กางเกงบ๊อกเซอร์ชาย NY061 (แพ็ค 5 ตัว)", p: "43.00", i: "https://down-th.img.susercontent.com/file/sg-11134201-7rfi0-m3relhefvct9ec", d: "ผ้านุ่ม ใส่สบาย", url: "https://shopee.co.th/" },
-            { id: 12, cat: "cat-trend", s: "Shopee", n: "ชุดนอน บิ๊กไซส์ ลายการ์ตูน", p: "129.00", i: "https://down-th.img.susercontent.com/file/th-11134207-7r98r-lxihxyj3euuo2b", d: "ผ้าบางเบา อกถึง 52", url: "https://shopee.co.th/" },    
-            { id: 13, cat: "cat-trend", s: "Shopee", n: "Toogtons บ๊อกเซอร์นุ่ม ลายหมา", p: "89.00", i: "https://down-th.img.susercontent.com/file/th-11134207-81zto-mfdiva5u4zrhc2", d: "นุ่มเหมือนมาร์ชเมลโล่", url: "https://shopee.co.th/" },
-            { id: 14, cat: "cat-trend", s: "Shopee", n: "KATE LIP MONSTER 3g", p: "441.00", i: "https://down-th.img.susercontent.com/file/th-11134207-7r98w-lym3isbzyox58c", d: "ลิปสติกสีสดชัด ติดทนนาน", url: "https://shopee.co.th/" },
-            { id: 15, cat: "cat-trend", s: "Shopee", n: "ร่มพับกัน UV ด้านในดำ YS-01", p: "38.00", i: "https://down-th.img.susercontent.com/file/th-11134207-7r98z-lxlezseycvdb7f", d: "ร่มกันแดด กันฝน พกพาง่าย", url: "https://shopee.co.th/" },
-            { id: 16, cat: "cat-trend", s: "Shopee", n: "ราวตากผ้าเหล็ก ราว 2 ชั้น", p: "121.00", i: "https://down-th.img.susercontent.com/file/aee62dd20ea4a175372461e4340088b2", d: "โครงสร้างแข็งแรง ตากได้เยอะ", url: "https://shopee.co.th/" },
-            { id: 17, cat: "cat-trend", s: "ตลาดไท", n: "หมูเนื้อแดง", p: "130.00 - 145.00", i: "https://moointer.com/wp-content/uploads/2025/08/%E0%B9%80%E0%B8%99%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B9%81%E0%B8%94%E0%B8%87%E0%B8%A7%E0%B8%B1%E0%B8%A7_cover.png", d: "เนื้อสด ไม่ติดมัน", url: "https://talaadthai.com/" },
-            { id: 18, cat: "cat-trend", s: "ตลาดไท", n: "หมูสามชั้น", p: "160.00 - 180.00", i: "https://backend.paleorobbie.com/static/db/plr/files/PorkBelly_recolor,tonh4XH86hw=.jpg", d: "เนื้อแน่น สดใหม่", url: "https://talaadthai.com/" },
-            { id: 19, cat: "cat-trend", s: "ตลาดไท", n: "อกไก่", p: "68.00 - 90.00", i: "https://backend.paleorobbie.com/static/db/plr/files/free-range%20chicken%20breast,VFHAvmftfcg=.jpg", d: "เนื้อแน่น สดใหม่", url: "https://talaadthai.com/" },
-            { id: 20, cat: "cat-trend", s: "ตลาดไท", n: "น่องไก่ติดสะโพก", p: "80.00 - 90.00", i: "https://marew.net/wp-content/uploads/2024/03/%E0%B8%99%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B9%84%E0%B8%81%E0%B9%88%E0%B9%80%E0%B8%95%E0%B9%87%E0%B8%A1.webp", d: "เนื้อนุ่ม ชุ่มฉ่ำ", url: "https://talaadthai.com/" },
-            { id: 21, cat: "cat-trend", s: "ตลาดไท", n: "ไข่ไก่ (เบอร์ 0) ยกแผง", p: "130.00 - 140.00", i: "https://fit-d.com/image_webp/f?src=./uploads/food/9469626eab202b3104188df534d4fb88.jpg", d: "ไซส์ใหญ่พิเศษ", url: "https://talaadthai.com/" },
-            { id: 22, cat: "cat-trend", s: "ตลาดไท", n: "ไข่ไก่ (เบอร์ 2) ยกแผง", p: "115.00 - 120.00", i: "https://res.cloudinary.com/freshketimage001/image/upload/v1752505327/mbzza6vr3rmwfryidetq.jpg", d: "ไซส์กลาง", url: "https://talaadthai.com/" },
-            { id: 23, cat: "cat-trend", s: "ตลาดไท", n: "ไข่เป็ด (ใหญ่)", p: "115.00 - 155.00", i: "https://www.sudyod.co.th/wp-content/uploads/2022/04/83c0b09afc5f4c54a2e87c572cd5bc08_1617615845833643846-removebg-preview-1.png", d: "ไข่แดงสีเข้ม มันวาว", url: "https://talaadthai.com/" },
-            { id: 24, cat: "cat-trend", s: "ตลาดไท", n: "ไก่บ้าน (ตัว)", p: "115.00 - 120.00", i: "https://www.sudyod.co.th/wp-content/uploads/2022/04/pngtree-fresh-chicken-ingredients-png-image_2432852-removebg-preview-1.png", d: "เนื้อเหนียวนุ่ม", url: "https://talaadthai.com/" },
-            { id: 25, cat: "cat-trend", s: "ตลาดไท", n: "มะนาว (แป้น)", p: "8.00 - 10.00", i: "https://sooktookkum.com/wp-content/uploads/2022/07/%E0%B8%A1%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%A7%E0%B9%81%E0%B8%9B%E0%B9%89%E0%B8%99-1.png", d: "มะนาว (แป้น)", url: "https://talaadthai.com/" },
-            { id: 26, cat: "cat-trend", s: "ตลาดไท", n: "ผักชี (ไทย)", p: "70.00 - 90.00", i: "https://image.makewebeasy.net/makeweb/m_1920x0/10fpwExto/products/%E0%B8%9C%E0%B8%B1%E0%B8%81%E0%B8%8A%E0%B8%B5.jpg?v=202405291424", d: "ผักชี (ไทย)", url: "https://talaadthai.com/" },
-            { id: 27, cat: "cat-trend", s: "ตลาดไท", n: "คะน้า (คัด)", p: "24.00 - 28.00", i: "https://img.lazcdn.com/g/p/01a26864ac9a2a8a441cf04d7c7d9c8e.png_720x720q80.png", d: "คะน้า (คัด)", url: "https://talaadthai.com/" },
-            { id: 28, cat: "cat-trend", s: "ตลาดไท", n: "กะหล่ำปลี", p: "12.00 - 15.00", i: "https://medthai.com/wp-content/uploads/2013/07/Cabbage-1.jpg", d: "กะหล่ำปลี", url: "https://talaadthai.com/" },
-            { id: 29, cat: "cat-trend", s: "ตลาดไท", n: "พริกขี้หนู (จินดา)", p: "35.00 - 55.00", i: "https://res.cloudinary.com/freshketimage001/image/upload/v1561652916/ocdyld7lboduxyytevsf.png", d: "พริกขี้หนู (จินดา)", url: "https://talaadthai.com/" },
-            { id: 30, cat: "cat-trend", s: "ตลาดไท", n: "มะเขือเทศ (สีดา)", p: "16.00 - 28.00", i: "https://res.cloudinary.com/freshketimage001/image/upload/v1658467207/juuisegw2ixcjbbhcmw2.jpg", d: "มะเขือเทศ (สีดา)", url: "https://talaadthai.com/" },
-            { id: 31, cat: "cat-trend", s: "ตลาดไท", n: "ถั่วฝักยาว", p: "20.00 - 70.00", i: "https://medthai.com/wp-content/uploads/2013/07/Yard-Long-bean-1.jpg", d: "ถั่วฝักยาว", url: "https://talaadthai.com/" },
-            { id: 32, cat: "cat-trend", s: "ตลาดไท", n: "แตงกวา (คัด)", p: "22.00 - 30.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReh7vOnhzbYt0okpCMAWb8kurzYkvz_AzP4A&s", d: "แตงกวา (คัด)", url: "https://talaadthai.com/" },
-            { id: 33, cat: "cat-trend", s: "ตลาดปลา", n: "ปลานิล (คละ)", p: "60.00 - 75.00", i: "https://res.cloudinary.com/freshketimage001/image/upload/v1551176949/y6phjxuw0glvay5tcfq0.jpg", d: "ตัวใหญ่ เนื้อเยอะ", url: "https://talaadthai.com/" },
-            { id: 34, cat: "cat-trend", s: "ตลาดปลา", n: "ปลาทับทิม", p: "85.00 - 100.00", i: "https://freshfishs.wordpress.com/wp-content/uploads/2011/08/oreochromis_niloticus_tubtim.jpg", d: "สีสวย เนื้อหวานแน่น", url: "https://talaadthai.com/" },
-            { id: 35, cat: "cat-trend", s: "ตลาดปลา", n: "ปลาดุก (บิ๊กอุย)", p: "45.00 - 55.00", i: "https://www.ปูนา.com/images/content/original-1658854004518.jpg", d: "คัดขนาดเท่ากัน", url: "https://talaadthai.com/" },
-            { id: 36, cat: "cat-trend", s: "ตลาดปลา", n: "ปลาช่อน (แม่น้ำ)", p: "120.00 - 150.00", i: "https://rigger.co.th/wp-content/uploads/2021/07/%E0%B8%9B%E0%B8%A5%E0%B8%B2%E0%B8%8A%E0%B9%88%E0%B8%AD%E0%B8%99.png", d: "ตัวอ้วนแข็งแรง เนื้อแน่นหวาน", url: "https://talaadthai.com/" },
-            { id: 37, cat: "cat-trend", s: "ตลาดปลา", n: "ปลากะพงขาว", p: "140.00 - 170.00", i: "https://www.thammachartseafood.com/cdn/shop/products/fresh_mediterranean_seabass_whole_3_4.jpg?v=1646311868", d: "สดจากบ่อทุกวัน", url: "https://talaadthai.com/" },
-            { id: 38, cat: "cat-trend", s: "ตลาดปลา", n: "กุ้งขาว (50-60 ตัว/กก.)", p: "180.00 - 170.00", i: "https://st.bigc-cs.com/cdn-cgi/image/format=webp,quality=90/public/media/catalog/product/01/02/0254501/0254501_1-20251017172908-.jpg", d: "ตัวใส เปลือกตึง", url: "https://talaadthai.com/" },
-            { id: 39, cat: "cat-trend", s: "ตลาดปลา", n: "หมึกกล้วย (กลาง)", p: "220.00 - 280.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSekOPhWAitasn_D3lIxfeLdd_EqNO4pHhiqg&s", d: "ขาวสด ไม่คาว", url: "https://talaadthai.com/" },
-            { id: 40, cat: "cat-trend", s: "ตลาดปลา", n: "ปูม้า (สด)", p: "350.00 - 450.00", i: "https://upload.wikimedia.org/wikipedia/commons/b/b2/Portunus_pelagicus_male.jpg", d: "คัดไซส์ สดใหม่จากทะเล", url: "https://talaadthai.com/" },
-            { id: 41, cat: "cat-trend", s: "ตลาดปลา", n: "ปลาทู (นึ่ง/เข่ง)", p: "25.00 - 40.00", i: "https://pcdaily.co.th/wp-content/uploads/2020/08/PD-000101119.jpg", d: "ตัวสั้น หน้าหัก คอพับ เนื้อหอมมัน", url: "https://talaadthai.com/" },
-            { id: 42, cat: "cat-trend", s: "ตลาดปลา", n: "หอยแมลงภู่", p: "40.00 - 60.00", i: "https://www.foodproject.co.th/media/catalog/product/cache/8b5127ac8d51d24681f35bb914e2eda0/j/p/jp-clams-akagai-ark-shell.png", d: "ตัวใหญ่ ล้างสะอาด ไม่มีโคลน", url: "https://talaadthai.com/" }
+            { id: 1, cat: "cat-trend", s: "Shopee", n: "เสื้อใน ชุดชั้นใน", p: "18.00 - 59.00", i: "https://getzhop.com/wp-content/uploads/2024/03/FSCGBMNN00001-1-10.jpg", d: "", url: "https://shopee.co.th/" },
+            { id: 2, cat: "cat-trend", s: "Shopee", n: "พาวเวอร์แบงค์", p: "299.00 - 1,169.00", i: "https://f.ptcdn.info/353/083/000/s9i6kt1tk7wX7CH0Kf1ed-o.jpg", d: "", url: "https://shopee.co.th/" },
+            { id: 3, cat: "cat-trend", s: "Shopee", n: "กางเกงขาสั้นผู้ชาย", p: "35.00 - 189.00", i: "https://img.lazcdn.com/g/p/a2c0535b060da6d52b037504c163183c.jpg_720x720q80.jpg", d: "", url: "https://shopee.co.th/" },
+            { id: 4, cat: "cat-trend", s: "Shopee", n: "กางเกงชั้นในชาย", p: "19.00 - 68.00", i: "https://www.thaijpress.com/wp-content/uploads/2021/04/8116.jpg", d: "", url: "https://shopee.co.th/" },
+            { id: 5, cat: "cat-trend", s: "Shopee", n: "ชุดนอน", p: "198.00 - 539.00", i: "https://down-th.img.susercontent.com/file/th-11134207-7r98u-ly0i15e9yv1s43", d: "", url: "https://shopee.co.th/" },
+            { id: 6, cat: "cat-trend", s: "Shopee", n: "เล็บปลอมกันน้ำ", p: "45.00 - 65.00", i: "https://down-th.img.susercontent.com/file/th-11134207-7r98r-lnqw9hh7wvhj35", d: "", url: "https://shopee.co.th/" },
+            { id: 7, cat: "cat-trend", s: "Shopee", n: "กางเกงบ๊อกเซอร์", p: "9.00 - 59.00", i: "https://images.giordano.com/productphoto/01179139001/45_1_2_1_0620_0620.jpg", d: "", url: "https://shopee.co.th/" },
+            { id: 8, cat: "cat-trend", s: "Shopee", n: "กางเกงชั้นในไร้ขอบ", p: "28.00 - 76.00", i: "https://image.makewebcdn.com/makeweb/m_1920x0/o9wFAPelf/BUNA01/%E0%B8%81%E0%B8%B2%E0%B8%87%E0%B9%80%E0%B8%81%E0%B8%87%E0%B9%83%E0%B8%9912.jpg", d: "", url: "https://shopee.co.th/" },
+            { id: 9, cat: "cat-trend", s: "Shopee", n: "ร่มแบบพับ", p: "54.00 - 89.00", i: "https://flamingoumbrella.com/wp-content/uploads/2023/08/blog-14.jpeg", d: "", url: "https://shopee.co.th/" },
+            { id: 10, cat: "cat-trend", s: "Shopee", n: "ปลั๊กไฟ", p: "60.00 - 80.00", i: "https://kitchenwaremarket.com/getimage/products/pae-206u-001.jpg", d: "", url: "https://shopee.co.th/" },
+            { id: 11, cat: "cat-trend", s: "Shopee", n: "ราวตากผ้า", p: "68.00 - 124.00", i: "https://image.makewebeasy.net/makeweb/m_1920x0/MYf9DO9au/DefaultData/1981185_1.jpg", d: "", url: "https://shopee.co.th/" },
+            { id: 12, cat: "cat-trend", s: "Shopee", n: "ดินสอเขียนคิ้ว", p: "7.00 -75.00", i: "https://www.nongchatmakeup.com/wp-content/uploads/2025/01/Browit-Chef-Eyebrow-Pencil-%E0%B9%80%E0%B8%8A%E0%B8%9F%E0%B8%AD%E0%B8%B2%E0%B8%A2%E0%B8%9A%E0%B8%A3%E0%B8%B2%E0%B8%A7%E0%B9%80%E0%B8%9E%E0%B8%99%E0%B8%8B%E0%B8%B4%E0%B8%A5-0.15g-%E0%B8%9A%E0%B8%A3%E0%B8%B2%E0%B8%A7%E0%B8%AD%E0%B8%B4%E0%B8%97-17.jpg", d: "", url: "https://shopee.co.th/" },    
+            { id: 13, cat: "cat-trend", n: "หมูเนื้อแดง", p: "140", i: "https://www.ตลาดหมูเอ็มเค.com/wp-content/uploads/2020/03/1002.png", d: "เนื้อสดเกรดพรีเมียม", url: "https://talaadthai.com/" },
+            { id: 14, cat: "cat-trend", n: "หมูสามชั้น", p: "170", i: "https://res.cloudinary.com/freshketimage001/image/upload/c_fit,w_800,h_800,q_auto,f_auto/p5sw6n46rv6cdpidpvj5", d: "ติดมันกำลังดี", url: "https://talaadthai.com/" },
+            { id: 15, cat: "cat-trend", n: "อกไก่", p: "80", i: "https://backend.paleorobbie.com/static/db/plr/files/free-range%20chicken%20breast,VFHAvmftfcg=.jpg", d: "โปรตีนสูง", url: "https://talaadthai.com/" },
+            { id: 16, cat: "cat-trend", n: "น่องไก่ติดสะโพก", p: "85", i: "https://www.simummuangonline.com/files/product/original/66443efc85db20.jpg", d: "เนื้อนุ่ม ชุ่มฉ่ำ", url: "https://talaadthai.com/" },
+            { id: 17, cat: "cat-trend", n: "ไข่ไก่ เบอร์ 0", p: "135", i: "https://fit-d.com/image_webp/f?src=./uploads/food/9469626eab202b3104188df534d4fb88.jpg", d: "ไข่ใบใหญ่พิเศษ", url: "https://talaadthai.com/" },
+            { id: 18, cat: "cat-trend", n: "ไข่เป็ดสด", p: "120", i: "https://res.cloudinary.com/freshketimage001/image/upload/v1560858379/lmxd6hsegejhlkrloyww.png", d: "ไข่แดงมันวาว", url: "https://talaadthai.com/" },
+            { id: 19, cat: "cat-trend", n: "ไก่บ้าน", p: "120", i: "https://res.cloudinary.com/freshketimage001/image/upload/v1634281132/ivfg7ulyecuyda3jjjab.jpg", d: "เนื้อเหนียวนุ่ม", url: "https://talaadthai.com/" },
+            { id: 20, cat: "cat-trend", n: "เนื้อวัวบด", p: "250", i: "https://res.cloudinary.com/freshketimage001/image/upload/v1627638423/jquvakinkurcpocpzjwg.jpg", d: "สดใหม่ทุกวัน", url: "https://talaadthai.com/" },
+
+            // --- 2. ผัก (ID 21-28) ---
+            { id: 21, cat: "cat-trend", n: "ผักชีไทย", p: "80", i: "https://res.cloudinary.com/freshketimage001/image/upload/c_fit,w_800,h_800,q_auto,f_auto/pshdqhqvvakkbh3zevrh", d: "เขียวสด", url: "https://talaadthai.com/" },
+            { id: 22, cat: "cat-trend", n: "คะน้าคัด", p: "25", i: "https://res.cloudinary.com/freshketimage001/image/upload/c_fit,w_800,h_800,q_auto,f_auto/cuvhanbmhivxo4pegwkn", d: "กรอบหวาน", url: "https://talaadthai.com/" },
+            { id: 23, cat: "cat-trend", n: "กะหล่ำปลี", p: "15", i: "https://spfresh.co.th/wp-content/uploads/2022/10/%E0%B8%81%E0%B8%B0%E0%B8%AB%E0%B8%A5%E0%B9%88%E0%B8%B3%E0%B8%9B%E0%B8%A5%E0%B8%B5%E0%B8%82%E0%B8%B2%E0%B8%A7-1.jpg", d: "หัวใหญ่", url: "https://talaadthai.com/" },
+            { id: 24, cat: "cat-trend", n: "พริกขี้หนู", p: "40", i: "https://res.cloudinary.com/freshketimage001/image/upload/v1578641688/ilxfrmhyjnpcn7nr5ktm.png", d: "เผ็ดจัดจ้าน", url: "https://talaadthai.com/" },
+            { id: 25, cat: "cat-trend", n: "มะเขือเทศสีดา", p: "20", i: "https://res.cloudinary.com/freshketimage001/image/upload/v1658467207/juuisegw2ixcjbbhcmw2.jpg", d: "ลูกสวย", url: "https://talaadthai.com/" },
+            { id: 26, cat: "cat-trend", n: "ถั่วฝักยาว", p: "30", i: "https://medthai.com/wp-content/uploads/2013/07/Yard-Long-bean-1.jpg", d: "กรอบยาว", url: "https://talaadthai.com/" },
+            { id: 27, cat: "cat-trend", n: "แตงกวาคัด", p: "25", i: "https://bangkokfreshlink.com/cdn/shop/files/Cucumber_Size_Selected_Per_kg.webp?v=1765271465&width=1214", d: "สดกรอบ", url: "https://talaadthai.com/" },
+            { id: 28, cat: "cat-trend", n: "แครอทสด", p: "35", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-DU2UF7_Ap7ZEPn4x94aCYT-GpM4r8_Pa0w&s", d: "หวานกรอบ", url: "https://talaadthai.com/" },
+
+            // --- 3. ผลไม้ (ID 29-36) ---
+            { id: 29, cat: "cat-trend", n: "ส้มเขียวหวาน", p: "50", i: "https://www.disthai.com/images/editor/%E0%B8%AA%E0%B9%89%E0%B8%A1%E0%B9%80%E0%B8%82%E0%B8%B5%E0%B8%A2%E0%B8%A7%E0%B8%AB%E0%B8%A7%E0%B8%B2%E0%B8%994.jpg", d: "หวานฉ่ำ", url: "https://talaadthai.com/" },
+            { id: 30, cat: "cat-trend", n: "กล้วยหอม", p: "40", i: "https://fit-d.com/uploads/food/5f6c8c69a8f190b979f93f02475aac80.jpg", d: "หอมหวาน", url: "https://talaadthai.com/" },
+            { id: 31, cat: "cat-trend", n: "แตงโม", p: "60", i: "https://spfresh.co.th/wp-content/uploads/2022/12/%E0%B9%81%E0%B8%95%E0%B8%87%E0%B9%82%E0%B8%A1%E0%B8%87-1.jpg", d: "ลูกใหญ่", url: "https://talaadthai.com/" },
+            { id: 32, cat: "cat-trend", n: "มะม่วงน้ำดอกไม้", p: "70", i: "https://image.makewebcdn.com/makeweb/m_1920x0/2nvp7NtPx/DefaultData/011674202_F.jpg", d: "หวานหอม", url: "https://talaadthai.com/" },
+            { id: 33, cat: "cat-trend", n: "เงาะโรงเรียน", p: "45", i: "https://static.wixstatic.com/media/27fc68_5207732e12d3434c9201eb9107d459ad~mv2.png/v1/fill/w_520,h_388,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/27fc68_5207732e12d3434c9201eb9107d459ad~mv2.png", d: "หวานกรอบ", url: "https://talaadthai.com/" },
+            { id: 34, cat: "cat-trend", n: "มังคุด", p: "55", i: "https://medthai.com/wp-content/uploads/2013/07/Mangosteen-1.jpg", d: "สดใหม่", url: "https://talaadthai.com/" },
+            { id: 35, cat: "cat-trend", n: "ฝรั่งกิมจู", p: "30", i: "https://sooktookkum.com/wp-content/uploads/2022/07/%E0%B8%81%E0%B8%B4%E0%B8%A1%E0%B8%88%E0%B8%B9.png", d: "กรอบดี", url: "https://talaadthai.com/" },
+            { id: 36, cat: "cat-trend", n: "แก้วมังกร", p: "40", i: "https://f.ptcdn.info/982/086/000/m6s4saxziI5GWC77H7d-o.jpg", d: "หวานฉ่ำ", url: "https://talaadthai.com/" },
+
+            // --- 4. ของทะเล (ID 37-46) ---
+            { id: 37, cat: "cat-trend", n: "ปลานิลคละ", p: "70", i: "https://res.cloudinary.com/freshketimage001/image/upload/v1551176949/y6phjxuw0glvay5tcfq0.jpg", d: "เนื้อเยอะ", url: "https://talaadthai.com/" },
+            { id: 38, cat: "cat-trend", n: "ปลาทับทิม", p: "95", i: "https://cache-igetweb-v2.mt108.info/uploads/images-cache/4907/product/678536e2a504902dcff6f8bb0a73314d_full.jpg", d: "เนื้อแน่น", url: "https://talaadthai.com/" },
+            { id: 39, cat: "cat-trend", n: "ปลาดุก", p: "50", i: "https://gourmetmarketthailand.com/_next/image?url=https%3A%2F%2Fmedia-stark.gourmetmarketthailand.com%2Fproducts%2Fcover%2F67572-1-1755509676.532.webp&w=1200&q=75", d: "สดใหม่", url: "https://talaadthai.com/" },
+            { id: 40, cat: "cat-trend", n: "ปลาช่อน", p: "130", i: "https://moointer.com/wp-content/uploads/2025/08/%E0%B8%9B%E0%B8%A5%E0%B8%B2%E0%B8%8A%E0%B9%88%E0%B8%AD%E0%B8%99_cover.png", d: "หวานมัน", url: "https://talaadthai.com/" },
+            { id: 41, cat: "cat-trend", n: "ปลากะพง", p: "150", i: "https://gourmetmarketthailand.com/_next/image?url=https%3A%2F%2Fmedia-stark.gourmetmarketthailand.com%2Fproducts%2Fcover%2F68623-1.webp&w=1200&q=75", d: "สดจากบ่อ", url: "https://talaadthai.com/" },
+            { id: 42, cat: "cat-trend", n: "กุ้งขาว", p: "180", i: "https://png.pngtree.com/png-vector/20231003/ourmid/pngtree-shrimp-white-white-png-image_10056780.png", d: "ตัวใส", url: "https://talaadthai.com/" },
+            { id: 43, cat: "cat-trend", n: "หมึกกล้วย", p: "250", i: "https://www.foodproject.co.th/media/catalog/product/cache/8b5127ac8d51d24681f35bb914e2eda0/s/f/sf-squid-whole-squid.png", d: "เนื้อขาว", url: "https://talaadthai.com/" },
+            { id: 44, cat: "cat-trend", n: "ปูม้า", p: "400", i: "https://www.ธนาคารปู.com/wp-content/uploads/2022/07/%E0%B8%9B%E0%B8%B9%E0%B8%A1%E0%B9%89%E0%B8%B2.png", d: "ไซส์ใหญ่", url: "https://talaadthai.com/" },
+            { id: 45, cat: "cat-trend", n: "ปลาทู", p: "35", i: "https://www.paramee.com/wp-content/uploads/2023/08/%E0%B8%9B%E0%B8%A5%E0%B8%B2%E0%B8%97%E0%B8%B9%E0%B8%AD%E0%B8%B4%E0%B8%99%E0%B9%80%E0%B8%94%E0%B8%B5%E0%B8%A2-scaled.jpg", d: "หน้าหัก", url: "https://talaadthai.com/" },
+            { id: 46, cat: "cat-trend", n: "หอยแมลงภู่", p: "50", i: "https://www.thammachartseafood.com/cdn/shop/products/frozen_nz_greenshell_mussel_2.jpg?v=1644943195", d: "สะอาด", url: "https://talaadthai.com/" }
         ];
 
         const sections = [
@@ -548,38 +580,49 @@
             { id: "cat-5", title: "สาย PV โซล่าเซล" },
             { id: "cat-6", title: "แผงวงจรลดเพิ่มแรงดัน" },
             { id: "cat-7", title: "รับติดตั้งโซล่าเซลล์" },
+            { id: "cat-8", title: "บ้านและสวน" },
             { id: "cat-trend", title: "🛍️ TREND MARKET" }
         ];
 
         function init() {
-            const sidebar = document.getElementById('sidebar-menu');
-            const main = document.getElementById('product-sections');
+    const sidebar = document.getElementById('sidebar-menu');
+    const main = document.getElementById('product-sections');
+    
+    // 1. ระบุ ID สินค้าที่ต้องการให้โชว์ป้าย (ใส่เลข ID ของสินค้าที่คุณต้องการไว้ในนี้)
+    const bestSellerIds = [1, 2, 3, 4, 5, 13, 14, 15, 21, 22, 23, 29, 30, 31, 37, 38, 39, 40]; 
+
+    sections.forEach(sec => {
+        sidebar.innerHTML += `<a href="#${sec.id}" class="sidebar-link">${sec.title}</a>`;
+        
+        const items = products.filter(p => p.cat === sec.id);
+        
+        if(items.length > 0) {
+            let sectionHtml = `<h3 class="section-title" id="${sec.id}">${sec.title}</h3><div class="row g-3">`;
             
-            sections.forEach(sec => {
-                // สร้าง Menu Link
-                sidebar.innerHTML += `<a href="#${sec.id}" class="sidebar-link">${sec.title}</a>`;
-                
-                // กรองและสร้าง Section สินค้า
-                const items = products.filter(p => p.cat === sec.id);
-                if(items.length > 0) {
-                    let sectionHtml = `<h3 class="section-title" id="${sec.id}">${sec.title}</h3><div class="row g-3">`;
-                    items.forEach(p => {
-                        sectionHtml += `
-                            <div class="col-lg-3 col-6 mb-3">
-                                <div class="card product-card shadow-sm" onclick="openDetail(${p.id})">
-                                    <img src="${p.i}" class="card-img-top">
-                                    <div class="card-body p-2 text-center">
-                                        <h6 class="fw-bold mb-1" style="font-size:0.85rem; height:2.5em; overflow:hidden;">${p.n}</h6>
-                                        <p class="card-price mb-0">฿${p.p}</p>
-                                    </div>
-                                </div>
-                            </div>`;
-                    });
-                    sectionHtml += `</div>`;
-                    main.innerHTML += sectionHtml;
+            items.forEach(p => {
+                // แยก Logic ป้ายออกมา ไม่ให้ไปปนกับโครงสร้างการ์ด
+                let badgeHtml = "";
+                if (bestSellerIds.includes(p.id)) {
+                    badgeHtml = `<div style="position:absolute; top:8px; right:8px; background:#dc3545; color:white; padding:3px 8px; border-radius:5px; font-size:0.7rem; font-weight:bold; z-index:10; box-shadow:0 2px 4px rgba(0,0,0,0.2);">BEST</div>`;
                 }
+
+                sectionHtml += `
+                    <div class="col-lg-3 col-6 mb-3">
+                        <div class="card product-card shadow-sm" onclick="openDetail(${p.id})" style="position:relative; overflow:hidden;">
+                            ${badgeHtml}
+                            <img src="${p.i}" class="card-img-top">
+                            <div class="card-body p-2 text-center">
+                                <h6 class="fw-bold mb-1" style="font-size:0.85rem; height:2.5em; overflow:hidden;">${p.n}</h6>
+                                <p class="card-price mb-0">฿${p.p}</p>
+                            </div>
+                        </div>
+                    </div>`;
             });
+            sectionHtml += `</div>`;
+            main.innerHTML += sectionHtml;
         }
+    });
+}
 
         function openDetail(id) {
             const item = products.find(x => x.id == id);
