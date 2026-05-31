@@ -6,6 +6,7 @@
     <title>SP Service</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="https://i.postimg.cc/gcS5k03c/Gemini-Generated-Image-sbm4sjsbm4sjsbm4-removebg-preview.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
         :root { --gold: #D4AF37; --navy: #001f3f; --accent-red: #8B0000; }
         
@@ -29,22 +30,21 @@
 
         /* ✨ ปรับเฉพาะแถบ Navigation ให้ Shine & Liquid Glass */
         .header-custom { 
-            background: rgba(0, 31, 63, 0.527) !important; /* สีน้ำเงิน Navy แบบโปร่งแสง */
-            backdrop-filter: blur(15px) saturate(150%); /* เอฟเฟกต์กระจกเบลอและเร่งสีให้สดใส */
+            background: rgba(0, 31, 63, 0.527) !important; 
+            backdrop-filter: blur(15px) saturate(150%); 
             border-bottom: 2px solid var(--gold); 
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3); /* เพิ่มเงาให้แถบลอยเด่นออกมา */
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3); 
             padding: 10px 0; 
             position: sticky;
             top: 0;
             z-index: 1050;
         }
 
-        /* 🏆 ทำให้โลโก้ Shine (ส่องประกาย) */
+        /* 🏆 ทำให้โลโก้ Shine */
         .logo-img { 
             height: 70px; 
             width: auto; 
             cursor: pointer; 
-            /* ใส่แสงเรืองสีขาวและทองซ้อนกันเพื่อให้ดู Shine ที่สุด */
             filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.9)) 
                     drop-shadow(0 0 5px rgba(212, 175, 55, 0.5)); 
             transition: 0.4s;
@@ -52,10 +52,10 @@
 
         .logo-img:hover { 
             transform: scale(1.08); 
-            filter: drop-shadow(0 0 20px rgba(255, 255, 255, 1)); /* สว่างขึ้นตอนเมาส์ชี้ */
+            filter: drop-shadow(0 0 20px rgba(255, 255, 255, 1)); 
         }
 
-        /* 🔘 ปรับปุ่มติดต่อเราให้เข้ากับความ Shine */
+        /* 🔘 ปรับปุ่มติดต่อเรา */
         .btn-outline-warning {
             border: 2px solid var(--gold) !important;
             background: rgba(212, 175, 55, 0.1);
@@ -72,9 +72,8 @@
             color: var(--navy) !important;
             box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
         }
-                .logo-img:hover { transform: scale(1.05); }
 
-        /* 📌 Sidebar Sticky (เลื่อนตามหน้าจอ) */
+        /* 📌 Sidebar Sticky */
         .sidebar-card { 
             background: rgba(255, 255, 255, 0.5) !important; 
             backdrop-filter: blur(15px); 
@@ -95,6 +94,39 @@
 
         /* Product Section */
         .section-title { border-left: 6px solid var(--navy); padding-left: 15px; margin: 40px 0 20px 0; font-weight: bold; color: var(--navy); }
+        
+        /* 🧡 ปรับปรุงใหม่: ไฟนีออนกระพริบสีส้มสะท้อนแสง คมชัด อ่านง่าย ไม่กลืนกับพื้นหลัง */
+        .neon-update-badge {
+            font-size: 0.65rem;
+            font-weight: bold;
+            color: #ff5500; 
+            background: rgba(255, 85, 0, 0.12); 
+            padding: 2px 7px;
+            border-radius: 30px;
+            border: 1px solid #ff5500;
+            margin-left: 6px;
+            display: inline-flex;
+            align-items: center;
+            gap: 3px;
+            text-shadow: 0 0 4px #ff5500, 0 0 8px #ff5500;
+            box-shadow: 0 0 8px rgba(255, 85, 0, 0.25);
+            animation: neon-blink-sidebar 1.4s ease-in-out infinite alternate;
+            vertical-align: middle;
+        }
+
+        @keyframes neon-blink-sidebar {
+            0% {
+                opacity: 0.5;
+                text-shadow: 0 0 2px #ff5500;
+                box-shadow: 0 0 2px rgba(255, 85, 0, 0.1);
+            }
+            100% {
+                opacity: 1;
+                text-shadow: 0 0 6px #ff7733, 0 0 12px #ff5500;
+                box-shadow: 0 0 10px rgba(255, 85, 0, 0.45);
+            }
+        }
+
         .product-card { 
             background: rgba(255, 255, 255, 0.7) !important; 
             backdrop-filter: blur(10px); 
@@ -105,33 +137,44 @@
         .card-img-top { height: 160px; object-fit: cover; border-radius: 15px 15px 0 0; }
         .card-price { color: var(--accent-red); font-weight: 800; font-size: 1rem; }
 
-        /* 📞 Footer โครงสร้างเดิม */
+        /* 📞 Footer ปรับสัดส่วนแสดงผล */
         .footer-custom { 
-            background: rgba(255, 255, 255, 0.8) !important; 
-            backdrop-filter: blur(10px); 
-            border-top: 3px solid var(--gold); 
-            padding: 40px 0; margin-top: 60px; 
+            background: rgba(255, 255, 255, 0.85) !important; 
+            backdrop-filter: blur(15px); 
+            border-top: 4px solid var(--gold); 
+            padding: 50px 0 30px 0; margin-top: 60px; 
         }
-        .social-link { text-decoration: none; color: var(--navy); font-size: 1.1rem; display: flex; align-items: center; gap: 10px; margin-bottom: 15px; transition: 0.3s; }
-        .social-link:hover { color: var(--gold); }
+        .social-link { text-decoration: none; color: var(--navy); font-size: 1.05rem; display: flex; align-items: center; gap: 10px; margin-bottom: 15px; transition: 0.3s; }
+        .social-link:hover { color: var(--gold); transform: translateX(5px); }
+        
+        .footer-form-card {
+            background: rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(0, 31, 63, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .footer-form-card .form-control {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+
+        .qr-card {
+            background: white;
+            padding: 10px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            display: inline-block;
+            transition: 0.3s;
+            border: 2px solid var(--gold);
+        }
+        .qr-card:hover { transform: scale(1.05); }
 
         #detail-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 2000; display: none; backdrop-filter: blur(10px); }
-        .logo-img { 
-            height: 70px; 
-            width: auto; 
-            cursor: pointer; 
-            transition: 0.3s;
-            
-            /* 🔥 เปลี่ยน Glow เป็นสีขาวจางๆ แต่กว้างขึ้น */
-            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.9)); 
-        }
-
-        .logo-img:hover {
-            transform: scale(1.05);
-            /* เวลา hover ให้ Glow ขาวชัดขึ้นอีก */
-            filter: drop-shadow(0 0 20px rgba(255, 255, 255, 1)); 
-        }
-        /* 📢 ปรับปรุงแถบวิ่งให้ Smooth และเร็วเท่ากันทุกอุปกรณ์ */
+        
+        /* 📢 แถบวิ่งข่าวสาร */
         .news-ticker {
             background: rgba(212, 175, 55, 0.15) !important;
             backdrop-filter: blur(12px) saturate(150%);
@@ -147,14 +190,12 @@
         .ticker-content {
             display: flex;
             white-space: nowrap;
-            /* ใช้แอนิเมชั่นแบบ Linear และระบุเวลาที่เหมาะสม */
             animation: ticker-smooth 30s linear infinite;
         }
 
-        /* เทคนิคทำให้วิ่งต่อเนื่องไม่สะดุด */
         @keyframes ticker-smooth {
             0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); } /* วิ่งไปครึ่งหนึ่งของเนื้อหาที่ซ้ำกัน */
+            100% { transform: translateX(-50%); }
         }
 
         .ticker-item {
@@ -166,188 +207,120 @@
             align-items: center;
             gap: 10px;
         }
-/* 📸 Gallery Section - Liquid Glass Version */
-.gallery-section {
-    width: 100%;
-    margin-bottom: 50px;
-    position: relative;
-    z-index: 10; /* ดันให้ลอยเหนือพื้นหลัง */
-}
 
-.gallery-container {
-    background: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(15px);
-    border-radius: 25px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    padding: 20px;
-    position: relative; /* สำคัญ: เพื่อให้ปุ่มอ้างอิงตำแหน่งได้ */
-}
+        /* 📸 ส่วนแสดงสไลด์โชว์ผลงานขยายเต็มจอหน้ากว้าง 16:10 */
+        .gallery-section {
+            width: 100%;
+            margin: 40px 0;
+            position: relative;
+            z-index: 10;
+        }
 
-.gallery-wrapper {
-    display: flex;
-    overflow-x: hidden; 
-    scroll-behavior: smooth;
-    gap: 15px;
-}
+        .gallery-container { 
+            background: rgba(255, 255, 255, 0.4) !important; 
+            backdrop-filter: blur(15px);
+            border-radius: 25px; 
+            border: 1px solid rgba(255, 255, 255, 0.5) !important; 
+            padding: 20px; 
+            position: relative; 
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
 
-.gallery-item {
-    flex: 0 0 calc(33.333% - 10px);
-    min-width: 250px;
-    height: 200px;
-    border-radius: 20px;
-    overflow: hidden;
-    border: 3px solid white;
-}
+        .gallery-wrapper { 
+            display: flex; 
+            overflow-x: hidden; 
+            scroll-behavior: smooth; 
+            gap: 15px; 
+            width: 100%;
+        }
 
-@media (max-width: 768px) {
-    .gallery-item { flex: 0 0 85%; }
-}
+        .gallery-item { 
+            flex: 0 0 calc(33.333% - 10px); 
+            flex-shrink: 0; 
+            min-width: 280px; 
+            aspect-ratio: 16 / 10; 
+            border-radius: 20px; 
+            overflow: hidden; 
+            border: 3px solid white; 
+            cursor: pointer; 
+            transition: 0.3s;
+        }
 
-.gallery-item img { width: 100%; height: 100%; object-fit: cover; }
+        @media (max-width: 992px) {
+            .gallery-item { flex: 0 0 calc(50% - 8px); }
+        }
 
-/* 🔘 ปุ่มกดเลื่อน - แก้ไขให้ลอยอยู่บนรูปเสมอ */
-.nav-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 45px;
-    height: 45px;
-    background: rgba(0, 31, 63, 0.8);
-    color: var(--gold);
-    border: 2px solid var(--gold);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 100; /* ดันให้ปุ่มอยู่บนสุด */
-    transition: 0.3s;
-}
-<style>
-    /* 📸 ส่วนที่ 1: Showcase Gallery CSS */
-    .gallery-section {
-        width: 100%;
-        margin: 40px 0;
-        position: relative;
-        z-index: 10;
-    }
+        @media (max-width: 768px) {
+            .gallery-item { flex: 0 0 85%; }
+        }
 
-    .gallery-container { 
-        background: rgba(255, 255, 255, 0.4) !important; 
-        backdrop-filter: blur(15px);
-        border-radius: 25px; 
-        border: 1px solid rgba(255, 255, 255, 0.5) !important; 
-        padding: 20px; 
-        position: relative; 
-        box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-    }
+        .gallery-item:hover { 
+            transform: scale(1.02); 
+            border-color: var(--gold); 
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+        }
 
-    .gallery-wrapper { 
-        display: flex; 
-        overflow-x: hidden; 
-        scroll-behavior: smooth; 
-        gap: 15px; 
-    }
+        .gallery-item img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+        }
 
-    .gallery-item { 
-        flex: 0 0 calc(33.333% - 10px); 
-        min-width: 250px; 
-        height: 200px; 
-        border-radius: 20px; 
-        overflow: hidden; 
-        border: 3px solid white; 
-        cursor: pointer; 
-        transition: 0.3s;
-    }
+        .nav-btn {
+            position: absolute; 
+            top: 50%; 
+            transform: translateY(-50%);
+            width: 45px; 
+            height: 45px; 
+            background: rgba(0, 31, 63, 0.85);
+            color: var(--gold); 
+            border: 2px solid var(--gold); 
+            border-radius: 50%;
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            cursor: pointer; 
+            z-index: 100;
+            transition: 0.3s;
+        }
 
-    .gallery-item:hover { 
-        transform: scale(1.02); 
-        border-color: var(--gold); 
-        box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
-    }
+        .nav-btn:hover { 
+            background: var(--gold); 
+            color: var(--navy); 
+            box-shadow: 0 0 15px var(--gold);
+        }
 
-    .gallery-item img { 
-        width: 100%; 
-        height: 100%; 
-        object-fit: cover; 
-    }
+        .prev-btn { left: -15px; } 
+        .next-btn { right: -15px; }
 
-    /* 🔘 ปุ่มกดเลื่อน - ลอยอยู่ซ้ายขวาของกล่อง */
-    .nav-btn {
-        position: absolute; 
-        top: 50%; 
-        transform: translateY(-50%);
-        width: 45px; 
-        height: 45px; 
-        background: rgba(0, 31, 63, 0.85);
-        color: var(--gold); 
-        border: 2px solid var(--gold); 
-        border-radius: 50%;
-        display: flex; 
-        align-items: center; 
-        justify-content: center; 
-        cursor: pointer; 
-        z-index: 100;
-        transition: 0.3s;
-    }
+        #gallery-overlay {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(15px);
+            z-index: 3000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: zoom-out;
+        }
 
-    .nav-btn:hover { 
-        background: var(--gold); 
-        color: var(--navy); 
-        box-shadow: 0 0 15px var(--gold);
-    }
+        #gallery-overlay img {
+            max-width: 90%;
+            max-height: 85vh;
+            border-radius: 15px;
+            border: 3px solid var(--gold);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+        }
 
-    .prev-btn { left: -15px; } 
-    .next-btn { right: -15px; }
-
- /* 🔍 Full View Image Layer */
-#gallery-overlay {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    backdrop-filter: blur(15px);
-    z-index: 3000; /* อยู่บนสุดเหนือทุกอย่าง */
-    display: none;
-    align-items: center;
-    justify-content: center;
-    cursor: zoom-out;
-}
-
-#gallery-overlay img {
-    max-width: 90%;
-    max-height: 85vh;
-    border-radius: 15px;
-    border: 3px solid var(--gold);
-    box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
-    transition: 0.3s;
-}
-
-.close-gallery {
-    position: absolute;
-    top: 20px; right: 30px;
-    color: white;
-    font-size: 2.5rem;
-    cursor: pointer;
-}
-.nav-btn:hover { background: var(--gold); color: var(--navy); }
-.prev-btn { left: -10px; } /* ขยับออกนอกขอบนิดหน่อยให้กดง่าย */
-.next-btn { right: -10px; }
-/* ป้าย Best Seller */
-.badge-best {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: #ffc107; /* สีเหลืองทอง */
-    color: #000;
-    padding: 2px 10px;
-    border-radius: 20px;
-    font-weight: bold;
-    font-size: 0.8rem;
-    z-index: 5;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-</style>
+        .close-gallery {
+            position: absolute;
+            top: 20px; right: 30px;
+            color: white;
+            font-size: 2.5rem;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -359,68 +332,44 @@
             <a href="contact.html" class="btn btn-outline-warning fw-bold rounded-pill px-4">ติดต่อเรา</a>
         </div>
     </header>
+
     <div class="news-ticker shadow-sm">
-    <div class="ticker-content">
-        <div class="ticker-item"><i class="bi bi-megaphone-fill text-danger"></i> ยินดีต้อนรับสู่ SP Service: ศูนย์รวมโซล่าเซลล์ และ Trend Market!</div>
-        <div class="ticker-item"><i class="bi bi-lightning-charge-fill text-warning"></i> รับติดตั้งและจำหน่ายอุปกรณ์โซล่าเซลล์ อุปกรณ์ไฟฟ้าอิเลคทรอนิกส์ สื่อสาร CCTV NETWORK</div>
-        <div class="ticker-item"><i class="bi bi-telephone-fill"></i> Call Center: 02-5673246 | Line: 081-499-3724</div>
-        
-        <div class="ticker-item"><i class="bi bi-megaphone-fill text-danger"></i> รับเขียนโปรแกรม เว็บแอปพลิเคชัน เว็บไซต์และออกแบบหน้าจอทุกระบบ </div>
-        <div class="ticker-item"><i class="bi bi-lightning-charge-fill text-warning"></i> ติดต่อได้ที่ :thanomtorwor@gmail.com</div>
-        <div class="ticker-item"><i class="bi bi-telephone-fill"></i> Call Center: 02-5673246 | Line:081-499-3724</div>
+        <div class="ticker-content">
+            <div class="ticker-item"><i class="bi bi-megaphone-fill text-danger"></i> ยินดีต้อนรับสู่ SP Service: ศูนย์รวมโซล่าเซลล์ และ Trend Market!</div>
+            <div class="ticker-item"><i class="bi bi-lightning-charge-fill text-warning"></i> รับติดตั้งและจำหน่ายอุปกรณ์โซล่าเซลล์ อุปกรณ์ไฟฟ้าอิเลคทรอนิกส์ สื่อสาร CCTV NETWORK</div>
+            <div class="ticker-item"><i class="bi bi-telephone-fill"></i> Call Center: 02-5673246 | Line: 081-499-3724</div>
+            <div class="ticker-item"><i class="bi bi-megaphone-fill text-danger"></i> รับเขียนโปรแกรม เว็บแอปพลิเคชัน เว็บไซต์และออกแบบหน้าจอทุกระบบ </div>
         </div>
     </div>
-<div class="container gallery-section">
-    <h3 class="fw-bold text-navy mb-3"><i class="bi bi-stars"></i>รับงานติดตั้งโซล่าเซล</h3>
-    <div class="gallery-container shadow-sm">
-        
-        <div class="nav-btn prev-btn" onclick="manualSlide(-1)"><i class="bi bi-chevron-left"></i></div>
-        <div class="nav-btn next-btn" onclick="manualSlide(1)"><i class="bi bi-chevron-right"></i></div>
-        
-        <div class="gallery-wrapper" id="galleryScroll">
-            <div class="gallery-item" onclick="viewFullImage('https://i.postimg.cc/90mbNcFB/408076.jpg')">
-                <img src="https://i.postimg.cc/90mbNcFB/408076.jpg" alt="Showcase 1">
-            </div>
-            <div class="gallery-item" onclick="viewFullImage('https://i.postimg.cc/J0rxdR4q/408077.jpg')">
-                <img src="https://i.postimg.cc/J0rxdR4q/408077.jpg" alt="Showcase 2">
-            </div>
-            <div class="gallery-item" onclick="viewFullImage('https://i.postimg.cc/VvfgHzLW/408078.jpg')">
-                <img src="https://i.postimg.cc/VvfgHzLW/408078.jpg" alt="Showcase 3">
-            </div>
-            <div class="gallery-item" onclick="viewFullImage('https://i.postimg.cc/D0v6Y7yQ/408079.jpg')">
-                <img src="https://i.postimg.cc/D0v6Y7yQ/408079.jpg" alt="Showcase 4">
-            </div>
-            <div class="gallery-item" onclick="viewFullImage('https://i.postimg.cc/90mbNcFL/408080.jpg')">
-                <img src="https://i.postimg.cc/90mbNcFL/408080.jpg" alt="Showcase 5">
-            </div>
-            <div class="gallery-item" onclick="viewFullImage('https://i.postimg.cc/C5h76wLm/408081.jpg')">
-                <img src="https://i.postimg.cc/C5h76wLm/408081.jpg" alt="Showcase 6">
-            </div>
-            <div class="gallery-item" onclick="viewFullImage('https://i.postimg.cc/3N81b3JL/408082.jpg')">
-                <img src="https://i.postimg.cc/3N81b3JL/408082.jpg" alt="Showcase 7">
-            </div>
-            <div class="gallery-item" onclick="viewFullImage('https://i.postimg.cc/7hH9QqYs/408083.jpg')">
-                <img src="https://i.postimg.cc/7hH9QqYs/408083.jpg" alt="Showcase 8">
-            </div>
-            <div class="gallery-item" onclick="viewFullImage('https://i.postimg.cc/hvDs3KP3/408084.jpg')">
-                <img src="https://i.postimg.cc/hvDs3KP3/408084.jpg" alt="Showcase 9">
-            </div>
-            <div class="gallery-item" onclick="viewFullImage('https://i.postimg.cc/C5h76wLr/408085.jpg')">
-                <img src="https://i.postimg.cc/C5h76wLr/408085.jpg" alt="Showcase 10">
-            </div>
-            <div class="gallery-item" onclick="viewFullImage('https://i.postimg.cc/x8f5F9TZ/408086.jpg')">
-                <img src="https://i.postimg.cc/x8f5F9TZ/408086.jpg" alt="Showcase 11">
-            </div>
-            <div class="gallery-item" onclick="viewFullImage('https://i.postimg.cc/T1d0HTYS/408087.jpg')">
-                <img src="https://i.postimg.cc/T1d0HTYS/408087.jpg" alt="Showcase 12">
+
+    <div class="container-fluid gallery-section" style="padding: 0 40px;">
+        <h3 class="fw-bold text-navy mb-3" style="padding-left: 10px;"><i class="bi bi-stars"></i>รับงานติดตั้งโซล่าเซล</h3>
+        <div class="gallery-container shadow-sm">
+            <div class="nav-btn prev-btn" onclick="manualSlide(-1)"><i class="bi bi-chevron-left"></i></div>
+            <div class="nav-btn next-btn" onclick="manualSlide(1)"><i class="bi bi-chevron-right"></i></div>
+            
+            <div class="gallery-wrapper" id="galleryScroll">
+                <div class="gallery-item" onclick="viewFullImage('https://i.postimg.cc/90mbNcFB/408076.jpg')"><img src="https://i.postimg.cc/90mbNcFB/408076.jpg"></div>
+                <div class="gallery-item" onclick="viewFullImage('https://i.postimg.cc/J0rxdR4q/408077.jpg')"><img src="https://i.postimg.cc/J0rxdR4q/408077.jpg"></div>
+                <div class="gallery-item" onclick="viewFullImage('https://i.postimg.cc/VvfgHzLW/408078.jpg')"><img src="https://i.postimg.cc/VvfgHzLW/408078.jpg"></div>
+                <div class="gallery-item" onclick="viewFullImage('https://i.postimg.cc/D0v6Y7yQ/408079.jpg')"><img src="https://i.postimg.cc/D0v6Y7yQ/408079.jpg"></div>
+                <div class="gallery-item" onclick="viewFullImage('https://i.postimg.cc/90mbNcFL/408080.jpg')"><img src="https://i.postimg.cc/90mbNcFL/408080.jpg"></div>
+                <div class="gallery-item" onclick="viewFullImage('https://i.postimg.cc/C5h76wLm/408081.jpg')"><img src="https://i.postimg.cc/C5h76wLm/408081.jpg"></div>
+                <div class="gallery-item" onclick="viewFullImage('https://i.postimg.cc/3N81b3JL/408082.jpg')"><img src="https://i.postimg.cc/3N81b3JL/408082.jpg"></div>
+                <div class="gallery-item" onclick="viewFullImage('https://i.postimg.cc/7hH9QqYs/408083.jpg')"><img src="https://i.postimg.cc/7hH9QqYs/408083.jpg"></div>
+                <div class="gallery-item" onclick="viewFullImage('https://i.postimg.cc/hvDs3KP3/408084.jpg')"><img src="https://i.postimg.cc/hvDs3KP3/408084.jpg"></div>
+                <div class="gallery-item" onclick="viewFullImage('https://i.postimg.cc/C5h76wLr/408085.jpg')"><img src="https://i.postimg.cc/C5h76wLr/408085.jpg"></div>
+                <div class="gallery-item" onclick="viewFullImage('https://i.postimg.cc/x8f5F9TZ/408086.jpg')"><img src="https://i.postimg.cc/x8f5F9TZ/408086.jpg"></div>
+                <div class="gallery-item" onclick="viewFullImage('https://i.postimg.cc/T1d0HTYS/408087.jpg')"><img src="https://i.postimg.cc/T1d0HTYS/408087.jpg"></div>
             </div>
         </div>
     </div>
-</div>
-<div id="gallery-overlay" onclick="this.style.display='none'">
-    <span class="close-gallery">&times;</span>
-    <img id="full-image-src" src="">
-</div>
+
+    <div id="gallery-overlay" onclick="this.style.display='none'">
+        <span class="close-gallery">&times;</span>
+        <img id="full-image-src" src="">
+    </div>
+
     <div class="container mt-4 pb-5">
         <div class="row">
             <aside class="col-lg-3">
@@ -437,28 +386,56 @@
     </div>
 
     <footer class="footer-custom">
-    <div class="container">
-        <div class="row justify-content-center text-start">
-            <div class="col-md-5">
-                <a href="mailto: boomtik04@gmail.com?subject=ติดต่อสอบถามสินค้า&body=สวัสดีครับ ต้องการสอบถามเกี่ยวกับ..." class="social-link text-decoration-none d-block mb-2">
-                    <i class="bi bi-envelope-fill fs-3 text-danger"></i> Email: boomtik04@gmail.com
-                </a>
-                <a href="https://line.me/ti/p/~0814993724" target="_blank" class="social-link text-decoration-none d-block mb-2">
-                    <i class="bi bi-line fs-3 text-success"></i> LINE ID: 081-499-3724
-                </a>
+        <div class="container">
+            <div class="row g-4 justify-content-between text-start">
+                <div class="col-lg-6 col-md-12">
+                    <h5 class="fw-bold mb-3 text-navy" style="border-bottom: 2px solid var(--gold); padding-bottom: 5px; width: fit-content;">ช่องทางการติดต่อ</h5>
+                    <div class="row align-items-center mt-3">
+                        <div class="col-sm-7">
+                            <div class="social-link text-decoration-none" style="cursor: default;">
+                                <i class="bi bi-envelope-fill fs-3 text-danger"></i> Email: boomtik04@gmail.com
+                            </div>
+                            <a href="https://line.me/ti/p/~0814993724" target="_blank" class="social-link text-decoration-none">
+                                <i class="bi bi-line fs-3 text-success"></i> LINE ID: 081-499-3724
+                            </a>
+                            <a href="https://www.facebook.com/YOUR_PAGE_LINK" target="_blank" class="social-link text-decoration-none">
+                                <i class="bi bi-facebook fs-3 text-primary"></i> Facebook: SP Service
+                            </a>
+                            <a href="tel:025673246" class="social-link text-decoration-none">
+                                <i class="bi bi-phone-fill fs-3 text-dark"></i> Call Center: 02-5673246
+                            </a>
+                        </div>
+                        <div class="col-sm-5 text-center text-sm-start mt-3 mt-sm-0">
+                            <div class="qr-card text-center">
+                                <img src="https://i.postimg.cc/1tcHxyCD/504886.jpg" alt="LINE QR Code" style="width: 120px; height: 120px; object-fit: cover; border-radius: 8px;">
+                                <div class="small fw-bold text-success mt-1"><i class="bi bi-qr-code-scan"></i> สแกนแอดไลน์</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-md-12">
+                    <div class="footer-form-card">
+                        <h6 class="fw-bold mb-3 text-navy"><i class="bi bi-mailbox2"></i> ส่งข้อความหาเราผ่าน Email (ส่งจริง)</h6>
+                        <div class="mb-2">
+                            <input type="text" id="email-sender" class="form-control" placeholder="ชื่อของคุณ" required>
+                        </div>
+                        <div class="mb-2">
+                            <input type="text" id="email-subject" class="form-control" placeholder="หัวข้อเรื่องที่ต้องการติดต่อ" required>
+                        </div>
+                        <div class="mb-2">
+                            <textarea id="email-message" class="form-control" rows="3" placeholder="เขียนข้อความของคุณที่นี่..." required></textarea>
+                        </div>
+                        <button type="button" id="btnSendMail" onclick="sendFooterEmail()" class="btn btn-dark w-100 btn-sm fw-bold rounded-pill shadow-sm" style="background: var(--navy); border: 1px solid var(--gold);">
+                            <i class="bi bi-send-fill text-warning"></i> ส่งข้อความออกทันที
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-5">
-                <a href="https://www.facebook.com/YOUR_PAGE_LINK" target="_blank" class="social-link text-decoration-none d-block mb-2">
-                    <i class="bi bi-facebook fs-3 text-primary"></i> Facebook: SP Service
-                </a>
-                <a href="tel:025673246" class="social-link text-decoration-none d-block mb-2">
-                    <i class="bi bi-phone-fill fs-3 text-dark"></i> Call Center:02-5673246
-                </a>
-            </div>
+            <hr style="border-color: rgba(0,0,0,0.1); margin-top: 30px;">
+            <p class="text-center mt-3 text-muted small"> หจก เอสพีแมนเนจเม้นท์ เลขที่ 21 ถ.รังสิต-ปทุมธานี12 ซอย13 ต.ประชาธิปัตย์ อ.ธัญบุรี จ.ปทุมธานี 12130<br>ทะเบียนภาษี 0553543000255</p>
         </div>
-        <p class="text-center mt-4 text-muted small"> หจก เอสพีแมนเนจเม้นท์ เลขที่ 21 ถ.รังสิต-ปทุมธานี12 ซอย13 ต.ประชาธิปัตย์ อ.ธัญบุรี จ.ปทุมธานี 12130<br>ทะเบียนภาษี 0553543000255</p>
-    </div>
-</footer>
+    </footer>
 
     <div id="detail-overlay" onclick="closeDetail()">
         <div class="container h-100 d-flex align-items-center justify-content-center">
@@ -473,102 +450,89 @@
         </div>
     </div>
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("YOUR_PUBLIC_KEY"); 
+        })();
+    </script>
+
     <script>
-        // ข้อมูลสินค้าครบ 42 รายการจากไฟล์ปัจจุบัน + Solar Cell
         const products = [
-            // หมวด 1-6 Solar Cell (Mockup)
-            { id: 101, cat: "cat-1", s: "Solar", n: "ตัวจับยึดแผ่นตัวกลาง ขนาด 35-40 มม. สีเงิน", p: "33.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf6i0rqbCJqUOhYb505iEVICZjW6BSVjl6AQ&s", d: "ตัวจับยึดแผ่นตัวกลาง เป็นอุปกรณ์จับยึดแผงโซลาร์เซลล์ระหว่างกลางแผ่น ให้มีความแน่นขึ้น เพื่อให้การใช้งานของคุณเป็นไปอย่างยาวนาน แข็งแรง ทนทาน", url: "contact.html" },
-            { id: 102, cat: "cat-1", s: "Solar", n: "ตัวจับยึดแผ่นตัวข้าง ขนาด 35-40 มม. สีเงิน", p: "33.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTZhluQ8SC2W9eym5uix-BKmhPcr-bC-glDQ&s", d: "ตัวจับยึดแผ่นตัวกลาง เป็นอุปกรณ์จับยึดแผงโซลาร์เซลล์ระหว่างกลางแผ่น ให้มีความแน่นขึ้น เพื่อให้การใช้งานของคุณเป็นไปอย่างยาวนาน แข็งแรง ทนทาน", url: "contact.html" },
-            { id: 103, cat: "cat-1", s: "Solar", n: "เบรกเกอร์ รุ่น DC 1P 10A 500V สีขาว", p: "130.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7pNWR73FUgIeuSY-2usl4DwKcH6Mf8MPzdg&s", d: "เซอร์กิตเบรกเกอร์ อุปกรณ์ตัดวงจรไฟฟ้ากระแสตรง DC ในงานระบบโซลาร์ ช่วยป้องกันความเสียหายของเครื่องใช้ไฟฟ้า กระแสไฟฟ้าลัดวงจร และกระแสไฟฟ้าเกินพิกัด? ติดตั้งง่ายเชื่อมต่อระหว่างเมนเบรกเกอร์และลูกย่อย", url: "contact.html" },
-            { id: 104, cat: "cat-1", s: "Solar", n: "เบรกเกอร์ รุ่น DC 1P 16A 500V สีขาว", p: "130.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7pNWR73FUgIeuSY-2usl4DwKcH6Mf8MPzdg&s", d: "เซอร์กิตเบรกเกอร์ อุปกรณ์ตัดวงจรไฟฟ้ากระแสตรง DC ในงานระบบโซลาร์ ช่วยป้องกันความเสียหายของเครื่องใช้ไฟฟ้า กระแสไฟฟ้าลัดวงจร และกระแสไฟฟ้าเกินพิกัด? ติดตั้งง่ายเชื่อมต่อระหว่างเมนเบรกเกอร์และลูกย่อย", url: "contact.html" },
-            { id: 105, cat: "cat-1", s: "Solar", n: "เบรกเกอร์ รุ่น DC 1P 20A 500V สีขาว", p: "130.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7pNWR73FUgIeuSY-2usl4DwKcH6Mf8MPzdg&s", d: "เซอร์กิตเบรกเกอร์ อุปกรณ์ตัดวงจรไฟฟ้ากระแสตรง DC ในงานระบบโซลาร์ ช่วยป้องกันความเสียหายของเครื่องใช้ไฟฟ้า กระแสไฟฟ้าลัดวงจร และกระแสไฟฟ้าเกินพิกัด? ติดตั้งง่ายเชื่อมต่อระหว่างเมนเบรกเกอร์และลูกย่อย ", url: "contact.html" },
-            { id: 106, cat: "cat-1", s: "Solar", n: "เบรกเกอร์ รุ่น DC 1P 32A 500V สีขาว", p: "130.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7pNWR73FUgIeuSY-2usl4DwKcH6Mf8MPzdg&s", d: "เซอร์กิตเบรกเกอร์ อุปกรณ์ตัดวงจรไฟฟ้ากระแสตรง DC ในงานระบบโซลาร์ ช่วยป้องกันความเสียหายของเครื่องใช้ไฟฟ้า กระแสไฟฟ้าลัดวงจร และกระแสไฟฟ้าเกินพิกัด? ติดตั้งง่ายเชื่อมต่อระหว่างเมนเบรกเกอร์และลูกย่อย ", url: "contact.html" },
-            { id: 107, cat: "cat-1", s: "Solar", n: "เบรกเกอร์ รุ่น DC 1P 50A 500V สีขาว", p: "150.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7pNWR73FUgIeuSY-2usl4DwKcH6Mf8MPzdg&s", d: "เซอร์กิตเบรกเกอร์ อุปกรณ์ตัดวงจรไฟฟ้ากระแสตรง DC ในงานระบบโซลาร์ ช่วยป้องกันความเสียหายของเครื่องใช้ไฟฟ้า กระแสไฟฟ้าลัดวงจร และกระแสไฟฟ้าเกินพิกัด? ติดตั้งง่ายเชื่อมต่อระหว่างเมนเบรกเกอร์และลูกย่อย ", url: "contact.html" },
-            { id: 108, cat: "cat-1", s: "Solar", n: "เบรกเกอร์ รุ่น DC 1P 63A 500V สีขาว", p: "150.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7pNWR73FUgIeuSY-2usl4DwKcH6Mf8MPzdg&s", d: "เซอร์กิตเบรกเกอร์ อุปกรณ์ตัดวงจรไฟฟ้ากระแสตรง DC ในงานระบบโซลาร์ ช่วยป้องกันความเสียหายของเครื่องใช้ไฟฟ้า กระแสไฟฟ้าลัดวงจร และกระแสไฟฟ้าเกินพิกัด? ติดตั้งง่ายเชื่อมต่อระหว่างเมนเบรกเกอร์และลูกย่อย ", url: "contact.html" },
-            { id: 109, cat: "cat-1", s: "Solar", n: "เบรกเกอร์ รุ่น DC 2P 16A 500V สีขาว", p: "298.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqFYW-rv5pBF5VNeb9EKlV3bl14t0YkO8nQw&s", d: "เซอร์กิตเบรกเกอร์ อุปกรณ์ตัดวงจรไฟฟ้ากระแสตรง DC ในงานระบบโซลาร์ ช่วยป้องกันความเสียหายของเครื่องใช้ไฟฟ้า กระแสไฟฟ้าลัดวงจร และกระแสไฟฟ้าเกินพิกัด ติดตั้งง่ายเชื่อมต่อระหว่างเมนเบรกเกอร์และลูกย่อย ", url: "contact.html" },
-            { id: 110, cat: "cat-1", s: "Solar", n: "เบรกเกอร์ รุ่น DC 2P 20A 500V สีขาว", p: "298.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqFYW-rv5pBF5VNeb9EKlV3bl14t0YkO8nQw&s", d: "เซอร์กิตเบรกเกอร์ อุปกรณ์ตัดวงจรไฟฟ้ากระแสตรง DC ในงานระบบโซลาร์ ช่วยป้องกันความเสียหายของเครื่องใช้ไฟฟ้า กระแสไฟฟ้าลัดวงจร และกระแสไฟฟ้าเกินพิกัด ติดตั้งง่ายเชื่อมต่อระหว่างเมนเบรกเกอร์และลูกย่อย ", url: "contact.html" },
-            { id: 111, cat: "cat-1", s: "Solar", n: "เบรกเกอร์ รุ่น DC 2P 32A 500V สีขาว", p: "298.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqFYW-rv5pBF5VNeb9EKlV3bl14t0YkO8nQw&s", d: "เซอร์กิตเบรกเกอร์ อุปกรณ์ตัดวงจรไฟฟ้ากระแสตรง DC ในงานระบบโซลาร์ ช่วยป้องกันความเสียหายของเครื่องใช้ไฟฟ้า กระแสไฟฟ้าลัดวงจร และกระแสไฟฟ้าเกินพิกัด ติดตั้งง่ายเชื่อมต่อระหว่างเมนเบรกเกอร์และลูกย่อย ", url: "contact.html" },
-            { id: 112, cat: "cat-1", s: "Solar", n: "เบรกเกอร์ รุ่น DC 2P 50A 500V สีขาว", p: "298.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqFYW-rv5pBF5VNeb9EKlV3bl14t0YkO8nQw&s", d: "เซอร์กิตเบรกเกอร์ อุปกรณ์ตัดวงจรไฟฟ้ากระแสตรง DC ในงานระบบโซลาร์ ช่วยป้องกันความเสียหายของเครื่องใช้ไฟฟ้า กระแสไฟฟ้าลัดวงจร และกระแสไฟฟ้าเกินพิกัด ติดตั้งง่ายเชื่อมต่อระหว่างเมนเบรกเกอร์และลูกย่อย ", url: "contact.html" },
-            { id: 113, cat: "cat-1", s: "Solar", n: "ลูกฟิวส์ รุ่น DC FUSE 15A 1,000V สีขาว", p: "43.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9AZ6zaqFWNQAl3iUmD5eAOkuxeSjy-LhqrQ&s", d: "ลูกฟิวส์ ป้องกันระบบไฟจากโซลาร์เซลล์ และป้องกันความเสียหายให้อินเวอร์เตอร์ ควรใช้งานคู่กับฐานฟิวส์ ติดตั้งง่ายเชื่อมต่อระหว่างเมนเบรกเกอร์และลูกย่อย ]", url: "contact.html" },
-            { id: 114, cat: "cat-1", s: "Solar", n: "ลูกฟิวส์ รุ่น DC FUSE 20A 1,000V สีขาว", p: "48.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9AZ6zaqFWNQAl3iUmD5eAOkuxeSjy-LhqrQ&s", d: "ลูกฟิวส์ ป้องกันระบบไฟจากโซลาร์เซลล์ และป้องกันความเสียหายให้อินเวอร์เตอร์ ควรใช้งานคู่กับฐานฟิวส์ ติดตั้งง่ายเชื่อมต่อระหว่างเมนเบรกเกอร์และลูกย่อย ", url: "contact.html" },
-            { id: 115, cat: "cat-1", s: "Solar", n: "ลูกฟิวส์ รุ่น DC FUSE 30A 1,000V สีขาว", p: "67.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9AZ6zaqFWNQAl3iUmD5eAOkuxeSjy-LhqrQ&s", d: "ลูกฟิวส์ ป้องกันระบบไฟจากโซลาร์เซลล์ และป้องกันความเสียหายให้อินเวอร์เตอร์ ควรใช้งานคู่กับฐานฟิวส์ ติดตั้งง่ายเชื่อมต่อระหว่างเมนเบรกเกอร์และลูกย่อย ", url: "contact.html" },
+            { id: 101, cat: "cat-1", n: "ตัวจับยึดแผ่นตัวกลาง 35-40 มม.", p: "33.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf6i0rqbCJqUOhYb505iEVICZjW6BSVjl6AQ&s", d: "อุปกรณ์จับยึดแผงโซลาร์เซลล์ระหว่างกลางแผ่น แข็งแรง ทนทาน", url: "contact.html" },
+            { id: 102, cat: "cat-1", n: "ตัวจับยึดแผ่นตัวข้าง 35-40 มม.", p: "33.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTZhluQ8SC2W9eym5uix-BKmhPcr-bC-glDQ&s", d: "อุปกรณ์จับยึดแผงโซลาร์เซลล์ริมขอบแผ่น แข็งแรง ทนทาน", url: "contact.html" },
+            { id: 103, cat: "cat-1", n: "เบรกเกอร์ DC 1P 10A 500V", p: "130.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7pNWR73FUgIeuSY-2usl4DwKcH6Mf8MPzdg&s", d: "อุปกรณ์ตัดวงจรไฟฟ้ากระแสตรง DC ป้องกันกระแสลัดวงจร", url: "contact.html" },
+            { id: 104, cat: "cat-1", n: "เบรกเกอร์ DC 1P 16A 500V", p: "130.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7pNWR73FUgIeuSY-2usl4DwKcH6Mf8MPzdg&s", d: "อุปกรณ์ตัดวงจรไฟฟ้ากระแสตรง DC ป้องกันกระแสลัดวงจร", url: "contact.html" },
+            { id: 105, cat: "cat-1", n: "เบรกเกอร์ DC 1P 20A 500V", p: "130.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7pNWR73FUgIeuSY-2usl4DwKcH6Mf8MPzdg&s", d: "อุปกรณ์ตัดวงจรไฟฟ้ากระแสตรง DC ป้องกันกระแสลัดวงจร", url: "contact.html" },
+            { id: 106, cat: "cat-1", n: "เบรกเกอร์ DC 1P 32A 500V", p: "130.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7pNWR73FUgIeuSY-2usl4DwKcH6Mf8MPzdg&s", d: "อุปกรณ์ตัดวงจรไฟฟ้ากระแสตรง DC ป้องกันกระแสลัดวงจร", url: "contact.html" },
+            { id: 107, cat: "cat-1", n: "เบรกเกอร์ DC 1P 50A 500V", p: "150.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7pNWR73FUgIeuSY-2usl4DwKcH6Mf8MPzdg&s", d: "อุปกรณ์ตัดวงจรไฟฟ้ากระแสตรง DC ป้องกันกระแสลัดวงจร", url: "contact.html" },
+            { id: 108, cat: "cat-1", n: "เบรกเกอร์ DC 1P 63A 500V", p: "150.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7pNWR73FUgIeuSY-2usl4DwKcH6Mf8MPzdg&s", d: "อุปกรณ์ตัดวงจรไฟฟ้ากระแสตรง DC ป้องกันกระแสลัดวงจร", url: "contact.html" },
+            { id: 109, cat: "cat-1", n: "เบรกเกอร์ DC 2P 16A 500V", p: "298.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqFYW-rv5pBF5VNeb9EKlV3bl14t0YkO8nQw&s", d: "เบรกเกอร์ DC 2 พูล ป้องกันความเสียหายระบบโซลาร์", url: "contact.html" },
+            { id: 110, cat: "cat-1", n: "เบรกเกอร์ DC 2P 20A 500V", p: "298.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqFYW-rv5pBF5VNeb9EKlV3bl14t0YkO8nQw&s", d: "เบรกเกอร์ DC 2 พูล ป้องกันความเสียหายระบบโซลาร์", url: "contact.html" },
+            { id: 111, cat: "cat-1", n: "เบรกเกอร์ DC 2P 32A 500V", p: "298.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqFYW-rv5pBF5VNeb9EKlV3bl14t0YkO8nQw&s", d: "เบรกเกอร์ DC 2 พูล ป้องกันความเสียหายระบบโซลาร์", url: "contact.html" },
+            { id: 112, cat: "cat-1", n: "เบรกเกอร์ DC 2P 50A 500V", p: "298.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqFYW-rv5pBF5VNeb9EKlV3bl14t0YkO8nQw&s", d: "เบรกเกอร์ DC 2 พูล ป้องกันความเสียหายระบบโซลาร์", url: "contact.html" },
+            { id: 113, cat: "cat-1", n: "ลูกฟิวส์ DC FUSE 15A 1000V", p: "43.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9AZ6zaqFWNQAl3iUmD5eAOkuxeSjy-LhqrQ&s", d: "ลูกฟิวส์ป้องกันระบบไฟและอินเวอร์เตอร์จากโซลาร์เซลล์", url: "contact.html" },
+            { id: 114, cat: "cat-1", n: "ลูกฟิวส์ DC FUSE 20A 1000V", p: "48.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9AZ6zaqFWNQAl3iUmD5eAOkuxeSjy-LhqrQ&s", d: "ลูกฟิวส์ป้องกันระบบไฟและอินเวอร์เตอร์จากโซลาร์เซลล์", url: "contact.html" },
+            { id: 115, cat: "cat-1", n: "ลูกฟิวส์ DC FUSE 30A 1000V", p: "67.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9AZ6zaqFWNQAl3iUmD5eAOkuxeSjy-LhqrQ&s", d: "ลูกฟิวส์ป้องกันระบบไฟและอินเวอร์เตอร์จากโซลาร์เซลล์", url: "contact.html" },
             
-            { id: 201, cat: "cat-2", s: "Solar", n: "แบตเตอรี่ ไฮบริดเจล แรงดัน 12V 7.2A", p: "750.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeckNXI6xOnHrzppBD2yX47ey0X2BxA0s_tw&s", d: "แบตเตอรี่ ไฮบริดเจล TRANSPOWER ถูกออกแบบมาสำหรับการใช้งานที่มีรอบการชาร์จและดิสชาร์จบ่อยครั้ง ด้วยการพัฒนาของอิเลคโตรไลต์แบบ Nano Gel และวัสดุทำปฏิกิริยาเข้มข้น ยิ่งทำให้แบตเตอรี่มีประสิทธิภาพในการชาร์จสูงขึ้น และใช้กระแสชาร์จที่น้อยลง พร้อมคุณสมบัติของ Nano Gel ทำให้การแยกชั้นของน้ำกรดลดลง", url: "contact.html" },
-            { id: 202, cat: "cat-2", s: "Solar", n: "แบตเตอรี่ ไฮบริดเจล TRANSPOWER รุ่น TGEL12-12 แรงดัน 12V 12A", p: "1,100.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeckNXI6xOnHrzppBD2yX47ey0X2BxA0s_tw&s", d: "แบตเตอรี่ ไฮบริดเจล ถูกออกแบบมาสำหรับการใช้งานที่มีรอบการชาร์จและดิสชาร์จบ่อยครั้ง ด้วยการพัฒนาของอิเลคโตรไลต์แบบ Nano Gel และวัสดุทำปฏิกิริยาเข้มข้น ยิ่งทำให้แบตเตอรี่มีประสิทธิภาพในการชาร์จสูงขึ้น และใช้กระแสชาร์จที่น้อยลง พร้อมคุณสมบัติของ Nano Gel ทำให้การแยกชั้นของน้ำกรดลดลง", url: "contact.html" },
-            { id: 203, cat: "cat-2", s: "Solar", n: "แบตเตอรี่สำรองพกพา 200W", p: "2,988.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjJRbygv4G19p1a2NY7_gYKLZiEWcdV34opw&s", d: "แบตเตอรี่สำรองพกพา ออกแบบมาเพื่อตอบโจทย์การใช้งานในยามฉุกเฉิน ไฟฟ้าดับ กิจกรรมกลางแจ้ง หรือการทำงานนอกสถานที่ ด้วยกำลังไฟสูงสุด 200 วัตต์ สามารถจ่ายไฟให้อุปกรณ์อิเล็กทรอนิกส์ที่จำเป็นได้อย่างหลากหลาย ตั้งแต่สมาร์ตโฟน แท็บเล็ต โน้ตบุ๊ก ไปจนถึงอุปกรณ์ขนาดเล็ก เช่น พัดลมตั้งโต๊ะ โคมไฟส่องสว่าง หรืออุปกรณ์สื่อสารฉุกเฉิน", url: "contact.html" },
-            { id: 204, cat: "cat-2", s: "Solar", n: "แบตเตอรี่ลิเธียมฟอสเฟต แรงดัน 48V 20Ah", p: "13,480.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5xZuex_EzuULxWzuqihXchGez5AS3Ipp7qw&s", d: "แบตเตอรี่ลิเธียมฟอสเฟต ด้วยขนาดประจุไฟ 48 โวลต์ 20 แอมป์ ให้คุณจ่ายไฟฟ้าไปยังอุปกรณ์และเครื่องมือเครื่องใช้ต่าง ๆ อาทิเช่น งานโซลาร์เซลล์ ให้ความปลอดภัยสูง ตัวแบตเตอรี่มีน้ำหนักเบากว่าแบตเตอรี่ตะกั่วกรดทั่วไป 3 เท่า", url: "contact.html" },
-            { id: 205, cat: "cat-2", s: "Solar", n: "แบตเตอรี่ลิเธียมฟอสเฟต แรงดัน 48V 100Ah", p: "45,000.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4vbSaU8H1X38d1opUw0CjQ6_xEYbGXgV65A&s", d: "แบตเตอรี่ลิเธียมฟอสเฟต ด้วยขนาดประจุไฟ 48 โวลต์ 20 แอมป์ ให้คุณจ่ายไฟฟ้าไปยังอุปกรณ์และเครื่องมือเครื่องใช้ต่าง ๆ อาทิเช่น งานโซลาร์เซลล์ ให้ความปลอดภัยสูง ตัวแบตเตอรี่มีน้ำหนักเบากว่าแบตเตอรี่ตะกั่วกรดทั่วไป 3 เท่า", url: "contact.html" },
+            { id: 201, cat: "cat-2", n: "แบตเตอรี่ ไฮบริดเจล 12V 7.2A", p: "750.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeckNXI6xOnHrzppBD2yX47ey0X2BxA0s_tw&s", d: "แบตเตอรี่ไฮบริดเจลประสิทธิภาพการชาร์จสูง อายุยาวนาน", url: "contact.html" },
+            { id: 202, cat: "cat-2", n: "แบตเตอรี่ ไฮบริดเจล 12V 12A", p: "1,100.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeckNXI6xOnHrzppBD2yX47ey0X2BxA0s_tw&s", d: "แบตเตอรี่ไฮบริดเจลประสิทธิภาพการชาร์จสูง อายุยาวนาน", url: "contact.html" },
+            { id: 203, cat: "cat-2", n: "แบตเตอรี่สำรองพกพา 200W", p: "2,988.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjJRbygv4G19p1a2NY7_gYKLZiEWcdV34opw&s", d: "แบตเตอรี่พกพาสำหรับกิจกรรมกลางแจ้งและกรณีฉุกเฉิน", url: "contact.html" },
+            { id: 204, cat: "cat-2", n: "แบตเตอรี่ลิเธียมฟอสเฟต 48V 20Ah", p: "13,480.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5xZuex_EzuULxWzuqihXchGez5AS3Ipp7qw&s", d: "ลิเธียมฟอสเฟตจ่ายไฟเสถียร น้ำหนักเบา ปลอดภัยสูง", url: "contact.html" },
+            { id: 205, cat: "cat-2", n: "แบตเตอรี่ลิเธียมฟอสเฟต 48V 100Ah", p: "45,000.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4vbSaU8H1X38d1opUw0CjQ6_xEYbGXgV65A&s", d: "ลิเธียมฟอสเฟตความจุสูงพิเศษ เหมาะสำหรับระบบใหญ่", url: "contact.html" },
             
-            { id: 301, cat: "cat-3", s: "Solar", n: "โซลาร์ชาร์จเจอร์ PWM 12V/24V 20A", p: "680.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_o15W6ychp8x0DINneo22pR1cuNpIfH3QVQ&s", d: "โซลาร์ชาร์จเจอร์ เป็นอุปกรณ์ควบคุมการชาร์จไฟฟ้าจากแผงโซลาร์เซลล์ระบบ Off Grid ด้วยระบบการชาร์จอัจฉริยะ PWM (Pulse Width Modulation) ควบคุมความถี่ของคลื่นไฟฟ้าจากแผงโซลาร์เซลล์ให้คงที เพื่อยืดอายุการใช้งานแบตเตอรี่ และหยุดการชาร์จไฟเมื่อไฟเต็มแล้ว จะทำให้ไม่เกิดความเสียหายต่อระบบผลิตไฟฟ้าโซลาร์เซลล์", url: "contact.html" },
-            { id: 302, cat: "cat-3", s: "Solar", n: "โซล่าชาร์จเจอร์ MPPT 12V/24V 20A", p: "2,130.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpipKQDUfFYluWEB26RlHb33pctflNFgjPOw&s", d: "โซลาร์ชาร์จเจอร์ SUOER เป็นอุปกรณ์ควบคุมการชาร์จไฟฟ้าจากแผงโซลาร์เซลล์ระบบ On Grid ด้วยระบบการชาร์จแบบ MPPT มีระบบไมโครโพรเซสเซอร์ หรือตัวจับสัญญาณ คอยควบคุมดูแลสัญญาณไฟฟ้าที่ได้จากแผงโซลาร์เซลล์ สามารถชาร์จได้มากกว่า PWM 20 - 50% เพื่อยืดอายุการใช้งานแบตเตอรี่ และหยุดการชาร์จไฟเมื่อไฟเต็มแล้ว จะทำให้ไม่เกิดความเสียหายต่อระบบผลิตไฟฟ้าโซลาร์เซลล์", url: "contact.html" },
-            { id: 303, cat: "cat-3", s: "Solar", n: "โซลาร์ชาร์จเจอร์ MPPT 12V/24V/48V 40A", p: "7,430", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTReCPv20YLBQBsrmuDxRyFlACvZ1qVAxaPzw&s", d: "โซลาร์ชาร์จเจอร์ เป็นอุปกรณ์ควบคุมการชาร์จไฟฟ้าจากแผงโซลาร์เซลล์ระบบ On Grid ด้วยระบบการชาร์จแบบ MPPT มีระบบไมโครโพรเซสเซอร์ หรือตัวจับสัญญาณ คอยควบคุมดูแลสัญญาณไฟฟ้าที่ได้จากแผงโซลาร์เซลล์ สามารถชาร์จได้มากกว่า PWM 20 - 50% เพื่อยืดอายุการใช้งานแบตเตอรี่ และหยุดการชาร์จไฟเมื่อไฟเต็มแล้ว จะทำให้ไม่เกิดความเสียหายต่อระบบผลิตไฟฟ้าโซลาร์เซลล์", url: "contact.html" },
+            { id: 301, cat: "cat-3", n: "โซลาร์ชาร์จเจอร์ PWM 12V/24V 20A", p: "680.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_o15W6ychp8x0DINneo22pR1cuNpIfH3QVQ&s", d: "ควบคุมการชาร์จระบบ Off-Grid ยืดอายุแบตเตอรี่", url: "contact.html" },
+            { id: 302, cat: "cat-3", n: "โซล่าชาร์จเจอร์ MPPT 12V/24V 20A", p: "2,130.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpipKQDUfFYluWEB26RlHb33pctflNFgjPOw&s", d: "ระบบ MPPT ชาร์จไฟดีกว่าระบบทั่วไป 20-50%", url: "contact.html" },
+            { id: 303, cat: "cat-3", n: "โซลาร์ชาร์จเจอร์ MPPT 40A", p: "7,430.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTReCPv20YLBQBsrmuDxRyFlACvZ1qVAxaPzw&s", d: "ตัวควบคุมการชาร์จอัจฉริยะประสิทธิภาพสูง รองรับกระแส 40A", url: "contact.html" },
             
-            { id: 401, cat: "cat-4", s: "Solar", n: "ขั้วต่อสายแบบเส้น MC4 2 ออก 1 สาย Y (แพ็ค 1 คู่) สีดำ", p: "127.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMiWf8kPSr-nv-85gt9Yu_iUVjId00s8mExg&s", d: "ให้สายไฟของแผงโซลาร์เซลล์เชื่อมต่อกันได้อย่างง่ายดาย ด้วยขั้วต่อสายแบบเส้น MC4 สาย Y กลไลการเชื่อมต่อกระแสไฟเข้า 2 ทาง ออก 1 ทาง ยึดแน่นไม่หลุดง่าย สามารถใช้งานได้สะดวก ไม่ยุ่งยาก ผ่านกระบวนการการผลิตมาตรฐาน ใช้งานได้อย่างมั่นใจปลอดภัย", url: "contact.html" },
-            { id: 402, cat: "cat-4", s: "Solar", n: "ขั้วต่อสายแบบเส้น MC4 4 ออก 1 สาย Y (แพ็ค 1 คู่) สีดำ", p: "280.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9-GL6-7Psf09JyZVYGr8DhW2XKORb87S-XQ&s", d: "ให้สายไฟของแผงโซลาร์เซลล์เชื่อมต่อกันได้อย่างง่ายดาย ด้วยขั้วต่อสายแบบเส้น MC4 สาย Y กลไลการเชื่อมต่อกระแสไฟเข้า 4 ทาง ออก 1 ทาง ยึดแน่นไม่หลุดง่าย สามารถใช้งานได้สะดวก ไม่ยุ่งยาก ผ่านกระบวนการการผลิตมาตรฐาน ใช้งานได้อย่างมั่นใจปลอดภัย", url: "contact.html" },
-            { id: 403, cat: "cat-4", s: "Solar", n: "ขั้วต่อสายแบบเส้น MC4 3 ออก 1 สาย Y (แพ็ค 1 คู่) สีดำ", p: "197.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAA1u7Ro0IedAwFKky9byuKajfgp_Z1wKUjw&s", d: "ให้สายไฟของแผงโซลาร์เซลล์เชื่อมต่อกันได้อย่างง่ายดาย ด้วยขั้วต่อสายแบบเส้น MC4 สาย Y กลไลการเชื่อมต่อกระแสไฟเข้า 3 ทาง ออก 1 ทาง ยึดแน่นไม่หลุดง่าย สามารถใช้งานได้สะดวก ไม่ยุ่งยาก ผ่านกระบวนการการผลิตมาตรฐาน ใช้งานได้อย่างมั่นใจปลอดภัย", url: "contact.html" },
-            { id: 404, cat: "cat-4", s: "Solar", n: "ข้อต่อ MC4 2 ทาง สีดำ", p: "153.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA3Qnwukt-MGXFF-3Y38OS_izsZoDDIGPkDA&s", d: "หัวต่อสายไฟโซลาร์เซลล์ MC4 CONNECTOR แบบตัวผู้และตัวเมีย รองรับกระแสไฟเข้า 1 ทาง ออก 2 ทางใช้เป็นขั้วต่อสายโซลาร์เคเบิลขนาด 2.5, 4, 6 ตร.มม. ผลิตจากพลาสติกคุณภาพดี ไม่ลามไฟ ปราศจากสารพิษตกค้าง ทนทาน ใช้งานได้นาน", url: "contact.html" },
+            { id: 401, cat: "cat-4", n: "ขั้วต่อสาย MC4 2 ออก 1 (คู่)", p: "127.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMiWf8kPSr-nv-85gt9Yu_iUVjId00s8mExg&s", d: "ขั้วต่อสาย Y เชื่อมต่อแผงแบบขนาน แข็งแรงแน่นหนา", url: "contact.html" },
+            { id: 402, cat: "cat-4", n: "ขั้วต่อสาย MC4 4 ออก 1 (คู่)", p: "280.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9-GL6-7Psf09JyZVYGr8DhW2XKORb87S-XQ&s", d: "ขั้วต่อสาย Y รองรับการต่อขนาน 4 แผง ปลอดภัย", url: "contact.html" },
+            { id: 403, cat: "cat-4", n: "ขั้วต่อสาย MC4 3 ออก 1 (คู่)", p: "197.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAA1u7Ro0IedAwFKky9byuKajfgp_Z1wKUjw&s", d: "ขั้วต่อสาย Y รองรับการต่อขนาน 3 แผง มาตรฐานพรีเมียม", url: "contact.html" },
+            { id: 404, cat: "cat-4", n: "ข้อต่อ MC4 2 ทาง", p: "153.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA3Qnwukt-MGXFF-3Y38OS_izsZoDDIGPkDA&s", d: "หัวต่อสายไฟโซลาร์เซลล์ผู้-เมีย พลาสติกไม่ลามไฟ ทนทาน", url: "contact.html" },
             
-            { id: 501, cat: "cat-5", s: "Solar", n: "สายโซลาร์เซลล์ ยาว 100 เมตร สีแดง", p: "2,980.00", i: "https://www.thaiwatsadu.com/_next/image?url=https%3A%2F%2Fpim.thaiwatsadu.com%2FTWDPIM%2Fweb%2FThumbnail%2FImage%2F0202%2F60439284.jpg&w=640&q=75", d: "สายไฟโซลาร์เซลล์ PV Solar Cable เหมาะสำหรับใช้กับงาน Solar Roof Top, Solar Farm และ Solar Floating ฉนวนและเปลือกนอก ทำด้วยวัสดุ XLPO with FR-LSZH ต้านการลามไฟ ควันน้อย ปราศจากสารพิษฮาโลเจน ปลอดภัยต่อผู้ใช้งาน", url: "contact.html" },
-            { id: 502, cat: "cat-5", s: "Solar", n: "สายโซลาร์เซลล์ ยาว 100 เมตร สีดำ", p: "2,980.00", i: "https://www.thaiwatsadu.com/_next/image?url=https%3A%2F%2Fpim.thaiwatsadu.com%2FTWDPIM%2Fweb%2FThumbnail%2FImage%2F0202%2F60439285.jpg&w=640&q=75", d: "สายไฟโซลาร์เซลล์ PV Solar Cable  เหมาะสำหรับใช้กับงาน Solar Roof Top, Solar Farm และ Solar Floating ฉนวนและเปลือกนอก ทำด้วยวัสดุ XLPO with FR-LSZH ต้านการลามไฟ ควันน้อย ปราศจากสารพิษฮาโลเจน ปลอดภัยต่อผู้ใช้งาน", url: "contact.html" },
-            { id: 503, cat: "cat-5", s: "Solar", n: "สายพ่วงโซลาร์เซลล์ 5 เมตร 1 x 4 ตร.มม. สีดำ", p: "330.00", i: "https://www.thaiwatsadu.com/_next/image?url=https%3A%2F%2Fpim.thaiwatsadu.com%2FTWDPIM%2Fweb%2FThumbnail%2FImage%2F0202%2F60331942r1.jpg&w=640&q=75", d: "สายไฟโซลาร์เซลล์ PV Solar Cable ใช้สำหรับระบบโซลาร์เซลล์โดยเฉพาะสามารถติดตั้งได้ทุกสถานที่ เช่น โซลาร์ฟาร์ม โรงงานอุตสาหกรรม หรือตามอาคารทั่วไป ผลิตจากวัสดุไม่ลามไฟ ไร้สารพิษ ไม่เป็นอันตรายกับผู้ใช้งานและสิ่งแวดล้อม", url: "contact.html" },
-            { id: 504, cat: "cat-5", s: "Solar", n: "สายพ่วงโซลาร์เซลล์ 2 เมตร 1 x 6 ตร.มม. สีแดง", p: "270.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo8KKEN3AuUy9yI6nYG0FlDnYL2pPYQyrwZw&s", d: "สายไฟโซลาร์เซลล์ PV Solar Cable ใช้สำหรับระบบโซลาร์เซลล์โดยเฉพาะสามารถติดตั้งได้ทุกสถานที่ เช่น โซลาร์ฟาร์ม โรงงานอุตสาหกรรม หรือตามอาคารทั่วไป ผลิตจากวัสดุไม่ลามไฟ ไร้สารพิษ ไม่เป็นอันตรายกับผู้ใช้งานและสิ่งแวดล้อม", url: "contact.html" },
-            { id: 505, cat: "cat-5", s: "Solar", n: "สายไฟโซลาร์เซลล์ PV (ตัดขายเป็นเมตร) ขนาด 1 x 6 ตร.มม. ความยาว 1 เมตร สีดำ", p: "38.00", i: "https://www.thaiwatsadu.com/_next/image?url=https%3A%2F%2Fpim.thaiwatsadu.com%2FTWDPIM%2Fweb%2FThumbnail%2FImage%2F0202%2F60365337.jpg&w=640&q=75", d: "สายไฟฟ้าสำหรับระบบโซลาร์เซลล์ PV ผลิตจากทองแดงชุบดีบุก เป็นตัวนำไฟฟ้าได้ดี แข็งแรงทนทานยากต่อการฉีกขาด ปลอดภัยต่อการใช้งานด้วยความสามารถในการทนความร้อนได้สูงถึง 120 องศาเซลเซียส", url: "contact.html" },
-            { id: 506, cat: "cat-5", s: "Solar", n: "สายไฟโซลาร์เซลล์ PV (ตัดขายเป็นเมตร) ขนาด 1 x 4 ตร.มม. ความยาว 1 เมตร สีแดง", p: "38.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvN6swwRm6RhXl-FRmTekF1zct_82ULj2I6w&s", d: "สายไฟฟ้าสำหรับระบบโซลาร์เซลล์ PV  ผลิตจากทองแดงชุบดีบุก เป็นตัวนำไฟฟ้าได้ดี แข็งแรงทนทานยากต่อการฉีกขาด ปลอดภัยต่อการใช้งานด้วยความสามารถในการทนความร้อนได้สูงถึง 120 องศาเซลเซียส", url: "contact.html" },
+            { id: 501, cat: "cat-5", n: "สายโซลาร์เซลล์ 100 เมตร (แดง)", p: "2,980.00", i: "https://www.thaiwatsadu.com/_next/image?url=https%3A%2F%2Fpim.thaiwatsadu.com%2FTWDPIM%2Fweb%2FThumbnail%2FImage%2F0202%2F60439284.jpg&w=640&q=75", d: "สายไฟระบบโซลาร์เซลล์โดยเฉพาะ ฉนวนกันความร้อน XLPO", url: "contact.html" },
+            { id: 502, cat: "cat-5", n: "สายโซลาร์เซลล์ 100 เมตร (ดำ)", p: "2,980.00", i: "https://www.thaiwatsadu.com/_next/image?url=https%3A%2F%2Fpim.thaiwatsadu.com%2FTWDPIM%2Fweb%2FThumbnail%2FImage%2F0202%2F60439285.jpg&w=640&q=75", d: "สายไฟระบบโซลาร์เซลล์โดยเฉพาะ ฉนวนกันความร้อน XLPO", url: "contact.html" },
+            { id: 503, cat: "cat-5", n: "สายพ่วงโซลาร์เซลล์ 5 เมตร 4 ตร.มม.", p: "330.00", i: "https://www.thaiwatsadu.com/_next/image?url=https%3A%2F%2Fpim.thaiwatsadu.com%2FTWDPIM%2Fweb%2FThumbnail%2FImage%2F0202%2F60331942r1.jpg&w=640&q=75", d: "สายพ่วงสำเร็จรูปเข้าหัว MC4 นำกระแสไฟฟ้าได้เป็นอย่างดี", url: "contact.html" },
+            { id: 504, cat: "cat-5", n: "สายพ่วงโซลาร์เซลล์ 2 เมตร 6 ตร.มม.", p: "270.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo8KKEN3AuUy9yI6nYG0FlDnYL2pPYQyrwZw&s", d: "สายพ่วงขนาดใหญ่สำเร็จรูป นำไฟฟ้าดีเยี่ยม ปลอดภัยสูง", url: "contact.html" },
+            { id: 505, cat: "cat-5", n: "สายไฟโซลาร์เซลล์ 6 ตร.มม. (ต่อเมตร)", p: "38.00", i: "https://www.thaiwatsadu.com/_next/image?url=https%3A%2F%2Fpim.thaiwatsadu.com%2FTWDPIM%2Fweb%2FThumbnail%2FImage%2F0202%2F60365337.jpg&w=640&q=75", d: "สายไฟตัดขายตามเมตร ทองแดงชุบดีบุกนำไฟฟ้าดี ทนร้อนสูง", url: "contact.html" },
+            { id: 506, cat: "cat-5", n: "สายไฟโซลาร์เซลล์ 4 ตร.มม. (ต่อเมตร)", p: "38.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvN6swwRm6RhXl-FRmTekF1zct_82ULj2I6w&s", d: "สายไฟตัดขายตามเมตร ทองแดงชุบดีบุกนำไฟฟ้าดี ทนร้อนสูง", url: "contact.html" },
             
-            { id: 601, cat: "cat-6", s: "Solar", n: "วงจรลดแรงดันแบบปรับค่าได้ DC-DC STEP DOWN 600W 25A BUCK CONVERTER ลดโวลต์ ไฟเข้า 12-75V ไฟออก 2.5-50V กระแสสูง 25A", p: "480.00", i: "https://down-th.img.susercontent.com/file/th-11134207-7r98r-lug8x0te8yem4a", d: "โมดูลปรับแรงดันไฟฟ้า", url: "contact.html" },
+            { id: 601, cat: "cat-6", n: "วงจรลดแรงดัน DC-DC 600W 25A", p: "480.00", i: "https://down-th.img.susercontent.com/file/th-11134207-7r98r-lug8x0te8yem4a", d: "โมดูล Buck Converter สำหรับปรับลดแรงดันไฟฟ้ากระแสสูง", url: "contact.html" },
 
-            // --- TREND MARKET (สินค้าดั้งเดิม 42 รายการ) ---
-            { id: 1, cat: "cat-trend", s: "Shopee", n: "เสื้อใน ชุดชั้นใน", p: "18.00 - 59.00", i: "https://getzhop.com/wp-content/uploads/2024/03/FSCGBMNN00001-1-10.jpg", d: "", url: "https://shopee.co.th/" },
-            { id: 2, cat: "cat-trend", s: "Shopee", n: "พาวเวอร์แบงค์", p: "299.00 - 1,169.00", i: "https://f.ptcdn.info/353/083/000/s9i6kt1tk7wX7CH0Kf1ed-o.jpg", d: "", url: "https://shopee.co.th/" },
-            { id: 3, cat: "cat-trend", s: "Shopee", n: "กางเกงขาสั้นผู้ชาย", p: "35.00 - 189.00", i: "https://img.lazcdn.com/g/p/a2c0535b060da6d52b037504c163183c.jpg_720x720q80.jpg", d: "", url: "https://shopee.co.th/" },
-            { id: 4, cat: "cat-trend", s: "Shopee", n: "กางเกงชั้นในชาย", p: "19.00 - 68.00", i: "https://www.thaijpress.com/wp-content/uploads/2021/04/8116.jpg", d: "", url: "https://shopee.co.th/" },
-            { id: 5, cat: "cat-trend", s: "Shopee", n: "ชุดนอน", p: "198.00 - 539.00", i: "https://down-th.img.susercontent.com/file/th-11134207-7r98u-ly0i15e9yv1s43", d: "", url: "https://shopee.co.th/" },
-            { id: 6, cat: "cat-trend", s: "Shopee", n: "เล็บปลอมกันน้ำ", p: "45.00 - 65.00", i: "https://down-th.img.susercontent.com/file/th-11134207-7r98r-lnqw9hh7wvhj35", d: "", url: "https://shopee.co.th/" },
-            { id: 7, cat: "cat-trend", s: "Shopee", n: "กางเกงบ๊อกเซอร์", p: "9.00 - 59.00", i: "https://images.giordano.com/productphoto/01179139001/45_1_2_1_0620_0620.jpg", d: "", url: "https://shopee.co.th/" },
-            { id: 8, cat: "cat-trend", s: "Shopee", n: "กางเกงชั้นในไร้ขอบ", p: "28.00 - 76.00", i: "https://image.makewebcdn.com/makeweb/m_1920x0/o9wFAPelf/BUNA01/%E0%B8%81%E0%B8%B2%E0%B8%87%E0%B9%80%E0%B8%81%E0%B8%87%E0%B9%83%E0%B8%9912.jpg", d: "", url: "https://shopee.co.th/" },
-            { id: 9, cat: "cat-trend", s: "Shopee", n: "ร่มแบบพับ", p: "54.00 - 89.00", i: "https://flamingoumbrella.com/wp-content/uploads/2023/08/blog-14.jpeg", d: "", url: "https://shopee.co.th/" },
-            { id: 10, cat: "cat-trend", s: "Shopee", n: "ปลั๊กไฟ", p: "60.00 - 80.00", i: "https://kitchenwaremarket.com/getimage/products/pae-206u-001.jpg", d: "", url: "https://shopee.co.th/" },
-            { id: 11, cat: "cat-trend", s: "Shopee", n: "ราวตากผ้า", p: "68.00 - 124.00", i: "https://image.makewebeasy.net/makeweb/m_1920x0/MYf9DO9au/DefaultData/1981185_1.jpg", d: "", url: "https://shopee.co.th/" },
-            { id: 12, cat: "cat-trend", s: "Shopee", n: "ดินสอเขียนคิ้ว", p: "7.00 -75.00", i: "https://www.nongchatmakeup.com/wp-content/uploads/2025/01/Browit-Chef-Eyebrow-Pencil-%E0%B9%80%E0%B8%8A%E0%B8%9F%E0%B8%AD%E0%B8%B2%E0%B8%A2%E0%B8%9A%E0%B8%A3%E0%B8%B2%E0%B8%A7%E0%B9%80%E0%B8%9E%E0%B8%99%E0%B8%8B%E0%B8%B4%E0%B8%A5-0.15g-%E0%B8%9A%E0%B8%A3%E0%B8%B2%E0%B8%A7%E0%B8%AD%E0%B8%B4%E0%B8%97-17.jpg", d: "", url: "https://shopee.co.th/" },    
-            { id: 13, cat: "cat-trend", n: "หมูเนื้อแดง", p: "140", i: "https://www.ตลาดหมูเอ็มเค.com/wp-content/uploads/2020/03/1002.png", d: "เนื้อสดเกรดพรีเมียม", url: "https://talaadthai.com/" },
-            { id: 14, cat: "cat-trend", n: "หมูสามชั้น", p: "170", i: "https://res.cloudinary.com/freshketimage001/image/upload/c_fit,w_800,h_800,q_auto,f_auto/p5sw6n46rv6cdpidpvj5", d: "ติดมันกำลังดี", url: "https://talaadthai.com/" },
-            { id: 15, cat: "cat-trend", n: "อกไก่", p: "80", i: "https://backend.paleorobbie.com/static/db/plr/files/free-range%20chicken%20breast,VFHAvmftfcg=.jpg", d: "โปรตีนสูง", url: "https://talaadthai.com/" },
-            { id: 16, cat: "cat-trend", n: "น่องไก่ติดสะโพก", p: "85", i: "https://www.simummuangonline.com/files/product/original/66443efc85db20.jpg", d: "เนื้อนุ่ม ชุ่มฉ่ำ", url: "https://talaadthai.com/" },
-            { id: 17, cat: "cat-trend", n: "ไข่ไก่ เบอร์ 0", p: "135", i: "https://fit-d.com/image_webp/f?src=./uploads/food/9469626eab202b3104188df534d4fb88.jpg", d: "ไข่ใบใหญ่พิเศษ", url: "https://talaadthai.com/" },
-            { id: 18, cat: "cat-trend", n: "ไข่เป็ดสด", p: "120", i: "https://res.cloudinary.com/freshketimage001/image/upload/v1560858379/lmxd6hsegejhlkrloyww.png", d: "ไข่แดงมันวาว", url: "https://talaadthai.com/" },
-            { id: 19, cat: "cat-trend", n: "ไก่บ้าน", p: "120", i: "https://res.cloudinary.com/freshketimage001/image/upload/v1634281132/ivfg7ulyecuyda3jjjab.jpg", d: "เนื้อเหนียวนุ่ม", url: "https://talaadthai.com/" },
-            { id: 20, cat: "cat-trend", n: "เนื้อวัวบด", p: "250", i: "https://res.cloudinary.com/freshketimage001/image/upload/v1627638423/jquvakinkurcpocpzjwg.jpg", d: "สดใหม่ทุกวัน", url: "https://talaadthai.com/" },
-
-            // --- 2. ผัก (ID 21-28) ---
-            { id: 21, cat: "cat-trend", n: "ผักชีไทย", p: "80", i: "https://res.cloudinary.com/freshketimage001/image/upload/c_fit,w_800,h_800,q_auto,f_auto/pshdqhqvvakkbh3zevrh", d: "เขียวสด", url: "https://talaadthai.com/" },
-            { id: 22, cat: "cat-trend", n: "คะน้าคัด", p: "25", i: "https://res.cloudinary.com/freshketimage001/image/upload/c_fit,w_800,h_800,q_auto,f_auto/cuvhanbmhivxo4pegwkn", d: "กรอบหวาน", url: "https://talaadthai.com/" },
-            { id: 23, cat: "cat-trend", n: "กะหล่ำปลี", p: "15", i: "https://spfresh.co.th/wp-content/uploads/2022/10/%E0%B8%81%E0%B8%B0%E0%B8%AB%E0%B8%A5%E0%B9%88%E0%B8%B3%E0%B8%9B%E0%B8%A5%E0%B8%B5%E0%B8%82%E0%B8%B2%E0%B8%A7-1.jpg", d: "หัวใหญ่", url: "https://talaadthai.com/" },
-            { id: 24, cat: "cat-trend", n: "พริกขี้หนู", p: "40", i: "https://res.cloudinary.com/freshketimage001/image/upload/v1578641688/ilxfrmhyjnpcn7nr5ktm.png", d: "เผ็ดจัดจ้าน", url: "https://talaadthai.com/" },
-            { id: 25, cat: "cat-trend", n: "มะเขือเทศสีดา", p: "20", i: "https://res.cloudinary.com/freshketimage001/image/upload/v1658467207/juuisegw2ixcjbbhcmw2.jpg", d: "ลูกสวย", url: "https://talaadthai.com/" },
-            { id: 26, cat: "cat-trend", n: "ถั่วฝักยาว", p: "30", i: "https://medthai.com/wp-content/uploads/2013/07/Yard-Long-bean-1.jpg", d: "กรอบยาว", url: "https://talaadthai.com/" },
-            { id: 27, cat: "cat-trend", n: "แตงกวาคัด", p: "25", i: "https://bangkokfreshlink.com/cdn/shop/files/Cucumber_Size_Selected_Per_kg.webp?v=1765271465&width=1214", d: "สดกรอบ", url: "https://talaadthai.com/" },
-            { id: 28, cat: "cat-trend", n: "แครอทสด", p: "35", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-DU2UF7_Ap7ZEPn4x94aCYT-GpM4r8_Pa0w&s", d: "หวานกรอบ", url: "https://talaadthai.com/" },
-
-            // --- 3. ผลไม้ (ID 29-36) ---
-            { id: 29, cat: "cat-trend", n: "ส้มเขียวหวาน", p: "50", i: "https://www.disthai.com/images/editor/%E0%B8%AA%E0%B9%89%E0%B8%A1%E0%B9%80%E0%B8%82%E0%B8%B5%E0%B8%A2%E0%B8%A7%E0%B8%AB%E0%B8%A7%E0%B8%B2%E0%B8%994.jpg", d: "หวานฉ่ำ", url: "https://talaadthai.com/" },
-            { id: 30, cat: "cat-trend", n: "กล้วยหอม", p: "40", i: "https://fit-d.com/uploads/food/5f6c8c69a8f190b979f93f02475aac80.jpg", d: "หอมหวาน", url: "https://talaadthai.com/" },
-            { id: 31, cat: "cat-trend", n: "แตงโม", p: "60", i: "https://spfresh.co.th/wp-content/uploads/2022/12/%E0%B9%81%E0%B8%95%E0%B8%87%E0%B9%82%E0%B8%A1%E0%B8%87-1.jpg", d: "ลูกใหญ่", url: "https://talaadthai.com/" },
-            { id: 32, cat: "cat-trend", n: "มะม่วงน้ำดอกไม้", p: "70", i: "https://image.makewebcdn.com/makeweb/m_1920x0/2nvp7NtPx/DefaultData/011674202_F.jpg", d: "หวานหอม", url: "https://talaadthai.com/" },
-            { id: 33, cat: "cat-trend", n: "เงาะโรงเรียน", p: "45", i: "https://static.wixstatic.com/media/27fc68_5207732e12d3434c9201eb9107d459ad~mv2.png/v1/fill/w_520,h_388,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/27fc68_5207732e12d3434c9201eb9107d459ad~mv2.png", d: "หวานกรอบ", url: "https://talaadthai.com/" },
-            { id: 34, cat: "cat-trend", n: "มังคุด", p: "55", i: "https://medthai.com/wp-content/uploads/2013/07/Mangosteen-1.jpg", d: "สดใหม่", url: "https://talaadthai.com/" },
-            { id: 35, cat: "cat-trend", n: "ฝรั่งกิมจู", p: "30", i: "https://sooktookkum.com/wp-content/uploads/2022/07/%E0%B8%81%E0%B8%B4%E0%B8%A1%E0%B8%88%E0%B8%B9.png", d: "กรอบดี", url: "https://talaadthai.com/" },
-            { id: 36, cat: "cat-trend", n: "แก้วมังกร", p: "40", i: "https://f.ptcdn.info/982/086/000/m6s4saxziI5GWC77H7d-o.jpg", d: "หวานฉ่ำ", url: "https://talaadthai.com/" },
-
-            // --- 4. ของทะเล (ID 37-46) ---
-            { id: 37, cat: "cat-trend", n: "ปลานิลคละ", p: "70", i: "https://res.cloudinary.com/freshketimage001/image/upload/v1551176949/y6phjxuw0glvay5tcfq0.jpg", d: "เนื้อเยอะ", url: "https://talaadthai.com/" },
-            { id: 38, cat: "cat-trend", n: "ปลาทับทิม", p: "95", i: "https://cache-igetweb-v2.mt108.info/uploads/images-cache/4907/product/678536e2a504902dcff6f8bb0a73314d_full.jpg", d: "เนื้อแน่น", url: "https://talaadthai.com/" },
-            { id: 39, cat: "cat-trend", n: "ปลาดุก", p: "50", i: "https://gourmetmarketthailand.com/_next/image?url=https%3A%2F%2Fmedia-stark.gourmetmarketthailand.com%2Fproducts%2Fcover%2F67572-1-1755509676.532.webp&w=1200&q=75", d: "สดใหม่", url: "https://talaadthai.com/" },
-            { id: 40, cat: "cat-trend", n: "ปลาช่อน", p: "130", i: "https://moointer.com/wp-content/uploads/2025/08/%E0%B8%9B%E0%B8%A5%E0%B8%B2%E0%B8%8A%E0%B9%88%E0%B8%AD%E0%B8%99_cover.png", d: "หวานมัน", url: "https://talaadthai.com/" },
-            { id: 41, cat: "cat-trend", n: "ปลากะพง", p: "150", i: "https://gourmetmarketthailand.com/_next/image?url=https%3A%2F%2Fmedia-stark.gourmetmarketthailand.com%2Fproducts%2Fcover%2F68623-1.webp&w=1200&q=75", d: "สดจากบ่อ", url: "https://talaadthai.com/" },
-            { id: 42, cat: "cat-trend", n: "กุ้งขาว", p: "180", i: "https://png.pngtree.com/png-vector/20231003/ourmid/pngtree-shrimp-white-white-png-image_10056780.png", d: "ตัวใส", url: "https://talaadthai.com/" },
-            { id: 43, cat: "cat-trend", n: "หมึกกล้วย", p: "250", i: "https://www.foodproject.co.th/media/catalog/product/cache/8b5127ac8d51d24681f35bb914e2eda0/s/f/sf-squid-whole-squid.png", d: "เนื้อขาว", url: "https://talaadthai.com/" },
-            { id: 44, cat: "cat-trend", n: "ปูม้า", p: "400", i: "https://www.ธนาคารปู.com/wp-content/uploads/2022/07/%E0%B8%9B%E0%B8%B9%E0%B8%A1%E0%B9%89%E0%B8%B2.png", d: "ไซส์ใหญ่", url: "https://talaadthai.com/" },
-            { id: 45, cat: "cat-trend", n: "ปลาทู", p: "35", i: "https://www.paramee.com/wp-content/uploads/2023/08/%E0%B8%9B%E0%B8%A5%E0%B8%B2%E0%B8%97%E0%B8%B9%E0%B8%AD%E0%B8%B4%E0%B8%99%E0%B9%80%E0%B8%94%E0%B8%B5%E0%B8%A2-scaled.jpg", d: "หน้าหัก", url: "https://talaadthai.com/" },
+            // 🛍️ TREND MARKET (13 ลงไป จัดสัดส่วน เนื้อ 8, ผัก 8, ผลไม้ 8, ทะเล 10 ครบชุด)
+            { id: 13, cat: "cat-trend", n: "หมูเนื้อแดง", p: "140.00", i: "https://www.ตลาดหมูเอ็มเค.com/wp-content/uploads/2020/03/1002.png", d: "เนื้อสดเกรดพรีเมียม", url: "https://talaadthai.com/" },
+            { id: 14, cat: "cat-trend", n: "หมูสามชั้น", p: "170.00", i: "https://res.cloudinary.com/freshketimage001/image/upload/c_fit,w_800,h_800,q_auto,f_auto/p5sw6n46rv6cdpidpvj5", d: "ติดมันกำลังดี", url: "https://talaadthai.com/" },
+            { id: 15, cat: "cat-trend", n: "อกไก่", p: "80.00", i: "https://backend.paleorobbie.com/static/db/plr/files/free-range%20chicken%20breast,VFHAvmftfcg=.jpg", d: "โปรตีนสูง", url: "https://talaadthai.com/" },
+            { id: 16, cat: "cat-trend", n: "น่องไก่ติดสะโพก", p: "85.00", i: "https://www.simummuangonline.com/files/product/original/66443efc85db20.jpg", d: "เนื้อนุ่ม ชุ่มฉ่ำ", url: "https://talaadthai.com/" },
+            { id: 17, cat: "cat-trend", n: "ไข่ไก่ เบอร์ 0", p: "135.00", i: "https://fit-d.com/image_webp/f?src=./uploads/food/9469626eab202b3104188df534d4fb88.jpg", d: "ไข่ใบใหญ่พิเศษ", url: "https://talaadthai.com/" },
+            { id: 18, cat: "cat-trend", n: "ไข่เป็ดสด", p: "120.00", i: "https://res.cloudinary.com/freshketimage001/image/upload/v1560858379/lmxd6hsegejhlkrloyww.png", d: "ไข่แดงมันวาว", url: "https://talaadthai.com/" },
+            { id: 19, cat: "cat-trend", n: "ไก่บ้าน", p: "120.00", i: "https://res.cloudinary.com/freshketimage001/image/upload/v1634281132/ivfg7ulyecuyda3jjjab.jpg", d: "เนื้อเหนียวนุ่ม", url: "https://talaadthai.com/" },
+            { id: 20, cat: "cat-trend", n: "เนื้อวัวบด", p: "250.00", i: "https://res.cloudinary.com/freshketimage001/image/upload/v1627638423/jquvakinkurcpocpzjwg.jpg", d: "สดใหม่ทุกวัน", url: "https://talaadthai.com/" },
+            { id: 21, cat: "cat-trend", n: "ผักชีไทย", p: "80.00", i: "https://res.cloudinary.com/freshketimage001/image/upload/c_fit,w_800,h_800,q_auto,f_auto/pshdqhqvvakkbh3zevrh", d: "เขียวสด", url: "https://talaadthai.com/" },
+            { id: 22, cat: "cat-trend", n: "คะน้าคัด", p: "25.00", i: "https://res.cloudinary.com/freshketimage001/image/upload/c_fit,w_800,h_800,q_auto,f_auto/cuvhanbmhivxo4pegwkn", d: "กรอบหวาน", url: "https://talaadthai.com/" },
+            { id: 23, cat: "cat-trend", n: "กะหล่ำปลี", p: "15.00", i: "https://spfresh.co.th/wp-content/uploads/2022/10/%E0%B8%81%E0%B8%A0%E0%B8%AB%E0%B8%A5%E0%B9%8ำ%E0%B8%9B%E0%B8%A5%E0%B8%B5%E0%B8%82%E0%B8%B2%E0%B8%A7-1.jpg", d: "หัวใหญ่", url: "https://talaadthai.com/" },
+            { id: 24, cat: "cat-trend", n: "พริกขี้หนู", p: "40.00", i: "https://res.cloudinary.com/freshketimage001/image/upload/v1578641688/ilxfrmhyjnpcn7nr5ktm.png", d: "เผ็ดจัดจ้าน", url: "https://talaadthai.com/" },
+            { id: 25, cat: "cat-trend", n: "มะเขือเทศสีดา", p: "20.00", i: "https://res.cloudinary.com/freshketimage001/image/upload/v1658467207/juuisegw2ixcjbbhcmw2.jpg", d: "ลูกสวย", url: "https://talaadthai.com/" },
+            { id: 26, cat: "cat-trend", n: "ถั่วฝักยาว", p: "30.00", i: "https://medthai.com/wp-content/uploads/2013/07/Yard-Long-bean-1.jpg", d: "กรอบยาว", url: "https://talaadthai.com/" },
+            { id: 27, cat: "cat-trend", n: "แตงกวาคัด", p: "25.00", i: "https://bangkokfreshlink.com/cdn/shop/files/Cucumber_Size_Selected_Per_kg.webp?v=1765271465&width=1214", d: "สดกรอบ", url: "https://talaadthai.com/" },
+            { id: 28, cat: "cat-trend", n: "แครอทสด", p: "35.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-DU2UF7_Ap7ZEPn4x94aCYT-GpM4r8_Pa0w&s", d: "หวานกรอบ", url: "https://talaadthai.com/" },
+            { id: 29, cat: "cat-trend", n: "ส้มเขียวหวาน", p: "50.00", i: "https://www.disthai.com/images/editor/%E0%B8%AA%E0%B1%89%E0%B8%A1%E0%B9%80%E0%B8%82%E0%B8%B5%E0%B8%A2%E0%B8%A7%E0%B8%AB%E0%B8%A7%E0%B8%B2%E0%B8%994.jpg", d: "หวานฉ่ำ", url: "https://talaadthai.com/" },
+            { id: 30, cat: "cat-trend", n: "กล้วยหอม", p: "40.00", i: "https://fit-d.com/uploads/food/5f6c8c69a8f190b979f93f02475aac80.jpg", d: "หอมหวาน", url: "https://talaadthai.com/" },
+            { id: 31, cat: "cat-trend", n: "แตงโม", p: "60.00", i: "https://spfresh.co.th/wp-content/uploads/2022/12/%E0%B9%81%E0%B8%95%E0%B8%87%E0%B9%82%E0%B8%A1%E0%B8%87-1.jpg", d: "ลูกใหญ่", url: "https://talaadthai.com/" },
+            { id: 32, cat: "cat-trend", n: "มะม่วงน้ำดอกไม้", p: "70.00", i: "https://image.makewebcdn.com/makeweb/m_1920x0/2nvp7NtPx/DefaultData/011674202_F.jpg", d: "หวานหอม", url: "https://talaadthai.com/" },
+            { id: 33, cat: "cat-trend", n: "เงาะโรงเรียน", p: "45.00", i: "https://static.wixstatic.com/media/27fc68_5207732e12d3434c9201eb9107d459ad~mv2.png/v1/fill/w_520,h_388,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/27fc68_5207732e12d3434c9201eb9107d459ad~mv2.png", d: "หวานกรอบ", url: "https://talaadthai.com/" },
+            { id: 34, cat: "cat-trend", n: "มังคุด", p: "55.00", i: "https://medthai.com/wp-content/uploads/2013/07/Mangosteen-1.jpg", d: "สดใหม่", url: "https://talaadthai.com/" },
+            { id: 35, cat: "cat-trend", n: "ฝรั่งกิมจู", p: "30.00", i: "https://sooktookkum.com/wp-content/uploads/2022/07/%E0%B8%81%E0%B8%B4%E0%B8%A1%E0%B8%87%E0%B8%B9.png", d: "กรอบดี", url: "https://talaadthai.com/" },
+            { id: 36, cat: "cat-trend", n: "แก้วมังกร", p: "40.00", i: "https://f.ptcdn.info/982/086/000/m6s4saxziI5GWC77H7d-o.jpg", d: "หวานฉ่ำ", url: "https://talaadthai.com/" },
+            { id: 37, cat: "cat-trend", n: "ปลานิลคละ", p: "70.00", i: "https://res.cloudinary.com/freshketimage001/image/upload/v1551176949/y6phjxuw0glvay5tcfq0.jpg", d: "เนื้อเยอะ", url: "https://talaadthai.com/" },
+            { id: 38, cat: "cat-trend", n: "ปลาทับทิม", p: "95.00", i: "https://cache-igetweb-v2.mt108.info/uploads/images-cache/4907/product/678536e2a504902dcff6f8bb0a73314d_full.jpg", d: "เนื้อแน่น", url: "https://talaadthai.com/" },
+            { id: 39, cat: "cat-trend", n: "ปลาดุก", p: "50.00", i: "https://gourmetmarketthailand.com/_next/image?url=https%3A%2F%2Fmedia-stark.gourmetmarketthailand.com%2Fproducts%2Fcover%2F67572-1-1755509676.532.webp&w=1200&q=75", d: "สดใหม่", url: "https://talaadthai.com/" },
+            { id: 40, cat: "cat-trend", n: "ปลาช่อน", p: "130.00", i: "https://moointer.com/wp-content/uploads/2025/08/%E0%B8%9B%E0%B8%A5%E0%B8%B2%E0%B8%A4%E0%B8%B9%E0%B8%A1%E0%B9%82%E0%B8%A1.png", d: "หวานมัน", url: "https://talaadthai.com/" },
+            { id: 41, cat: "cat-trend", n: "ปลากะพง", p: "150.00", i: "https://gourmetmarketthailand.com/_next/image?url=https%3A%2F%2Fmedia-stark.gourmetmarketthailand.com%2Fproducts%2Fcover%2F68623-1.webp&w=1200&q=75", d: "สดจากบ่อ", url: "https://talaadthai.com/" },
+            { id: 42, cat: "cat-trend", n: "กุ้งขาว", p: "180.00", i: "https://png.pngtree.com/png-vector/20231003/ourmid/pngtree-shrimp-white-white-png-image_10056780.png", d: "ตัวใส", url: "https://talaadthai.com/" },
+            { id: 43, cat: "cat-trend", n: "หมึกกล้วย", p: "250.00", i: "https://www.foodproject.co.th/media/catalog/product/cache/8b5127ac8d51d24681f35bb914e2eda0/s/f/sf-squid-whole-squid.png", d: "เนื้อขาว", url: "https://talaadthai.com/" },
+            { id: 44, cat: "cat-trend", n: "ปูม้า", p: "400.00", i: "https://www.ธนาคารปู.com/wp-content/uploads/2022/07/%E0%B...png", d: "ไซส์ใหญ่", url: "https://talaadthai.com/" },
+            { id: 45, cat: "cat-trend", n: "ปลาทู", p: "35", i: "https://www.paramee.com/wp-content/uploads/2023/08/%E0%B...jpg", d: "หน้าหัก", url: "https://talaadthai.com/" },
             { id: 46, cat: "cat-trend", n: "หอยแมลงภู่", p: "50", i: "https://www.thammachartseafood.com/cdn/shop/products/frozen_nz_greenshell_mussel_2.jpg?v=1644943195", d: "สะอาด", url: "https://talaadthai.com/" }
         ];
 
@@ -585,44 +549,46 @@
         ];
 
         function init() {
-    const sidebar = document.getElementById('sidebar-menu');
-    const main = document.getElementById('product-sections');
-    
-    // 1. ระบุ ID สินค้าที่ต้องการให้โชว์ป้าย (ใส่เลข ID ของสินค้าที่คุณต้องการไว้ในนี้)
-    const bestSellerIds = [1, 2, 3, 4, 5, 13, 14, 15, 21, 22, 23, 29, 30, 31, 37, 38, 39, 40]; 
+            const sidebar = document.getElementById('sidebar-menu');
+            const main = document.getElementById('product-sections');
+            const bestSellerIds = [13, 14, 15, 21, 22, 23, 29, 30, 31, 37, 38, 39, 40]; 
 
-    sections.forEach(sec => {
-        sidebar.innerHTML += `<a href="#${sec.id}" class="sidebar-link">${sec.title}</a>`;
-        
-        const items = products.filter(p => p.cat === sec.id);
-        
-        if(items.length > 0) {
-            let sectionHtml = `<h3 class="section-title" id="${sec.id}">${sec.title}</h3><div class="row g-3">`;
-            
-            items.forEach(p => {
-                // แยก Logic ป้ายออกมา ไม่ให้ไปปนกับโครงสร้างการ์ด
-                let badgeHtml = "";
-                if (bestSellerIds.includes(p.id)) {
-                    badgeHtml = `<div style="position:absolute; top:8px; right:8px; background:#dc3545; color:white; padding:3px 8px; border-radius:5px; font-size:0.7rem; font-weight:bold; z-index:10; box-shadow:0 2px 4px rgba(0,0,0,0.2);">BEST</div>`;
+            sections.forEach(sec => {
+                // ✅ แสดงผลไฟนีออนกระพริบสีส้มคมชัดสะดุดตาเฉพาะตรงแถบเมนูหมวดหมู่สินค้าฝั่งซ้ายมือ
+                let sidebarTitle = sec.title;
+                if(sec.id === 'cat-trend') {
+                    sidebarTitle += ` <span class="neon-update-badge">Update: 25/05/2026</span>`;
                 }
 
-                sectionHtml += `
-                    <div class="col-lg-3 col-6 mb-3">
-                        <div class="card product-card shadow-sm" onclick="openDetail(${p.id})" style="position:relative; overflow:hidden;">
-                            ${badgeHtml}
-                            <img src="${p.i}" class="card-img-top">
-                            <div class="card-body p-2 text-center">
-                                <h6 class="fw-bold mb-1" style="font-size:0.85rem; height:2.5em; overflow:hidden;">${p.n}</h6>
-                                <p class="card-price mb-0">฿${p.p}</p>
-                            </div>
-                        </div>
-                    </div>`;
+                sidebar.innerHTML += `<a href="#${sec.id}" class="sidebar-link d-flex align-items-center flex-wrap">${sidebarTitle}</a>`;
+                
+                const items = products.filter(p => p.cat === sec.id);
+                if(items.length > 0) {
+                    let sectionHtml = `<h3 class="section-title" id="${sec.id}">${sec.title}</h3><div class="row g-3">`;
+                    
+                    items.forEach(p => {
+                        let badgeHtml = "";
+                        if (bestSellerIds.includes(p.id)) {
+                            badgeHtml = `<div style="position:absolute; top:8px; right:8px; background:#dc3545; color:white; padding:3px 8px; border-radius:5px; font-size:0.7rem; font-weight:bold; z-index:10; box-shadow:0 2px 4px rgba(0,0,0,0.2);">BEST</div>`;
+                        }
+
+                        sectionHtml += `
+                            <div class="col-lg-3 col-6 mb-3">
+                                <div class="card product-card shadow-sm" onclick="openDetail(${p.id})" style="position:relative; overflow:hidden;">
+                                    ${badgeHtml}
+                                    <img src="${p.i}" class="card-img-top">
+                                    <div class="card-body p-2 text-center">
+                                        <h6 class="fw-bold mb-1" style="font-size:0.85rem; height:2.5em; overflow:hidden;">${p.n}</h6>
+                                        <p class="card-price mb-0">฿${p.p}</p>
+                                    </div>
+                                </div>
+                            </div>`;
+                    });
+                    sectionHtml += `</div>`;
+                    main.innerHTML += sectionHtml;
+                }
             });
-            sectionHtml += `</div>`;
-            main.innerHTML += sectionHtml;
         }
-    });
-}
 
         function openDetail(id) {
             const item = products.find(x => x.id == id);
@@ -639,21 +605,58 @@
             document.getElementById('detail-overlay').style.display = 'none';
             document.body.style.overflow = 'auto';
         }
-function manualSlide(direction) {
-    const el = document.getElementById('galleryScroll');
-    if (el) {
-        // เลื่อนไปตามความกว้างของรูปภาพ
-        const scrollAmount = el.clientWidth / 1.5; 
-        el.scrollLeft += (direction * scrollAmount);
-    }
-}
-// ฟังก์ชันสำหรับดูรูปใหญ่
-function viewFullImage(imgUrl) {
-    const overlay = document.getElementById('gallery-overlay');
-    const fullImg = document.getElementById('full-image-src');
-    fullImg.src = imgUrl;
-    overlay.style.display = 'flex';
-}
+
+        function manualSlide(direction) {
+            const el = document.getElementById('galleryScroll');
+            if (el) {
+                const scrollAmount = el.clientWidth / 1.5; 
+                el.scrollLeft += (direction * scrollAmount);
+            }
+        }
+
+        function viewFullImage(imgUrl) {
+            const overlay = document.getElementById('gallery-overlay');
+            const fullImg = document.getElementById('full-image-src');
+            fullImg.src = imgUrl;
+            overlay.style.display = 'flex';
+        }
+
+        function sendFooterEmail() {
+            const senderName = document.getElementById('email-sender').value;
+            const msgSubject = document.getElementById('email-subject').value;
+            const messageBody = document.getElementById('email-message').value;
+            const btn = document.getElementById('btnSendMail');
+
+            if(!senderName || !msgSubject || !messageBody) {
+                alert("กรุณากรอกข้อมูลให้ครบทุกช่องก่อนส่งข้อความครับ");
+                return;
+            }
+
+            btn.innerText = "กำลังส่ง...";
+            btn.disabled = true;
+
+            const templateParams = {
+                from_name: senderName,
+                subject: msgSubject,
+                message: messageBody,
+                to_email: "boomtik04@gmail.com"
+            };
+
+            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+                .then(function(response) {
+                    alert('🚀 ส่งข้อความสำเร็จ! ระบบได้บันทึกและจัดส่งอีเมลหาเจ้าหน้าที่เรียบร้อยแล้ว');
+                    document.getElementById('email-sender').value = "";
+                    document.getElementById('email-subject').value = "";
+                    document.getElementById('email-message').value = "";
+                    btn.innerText = "ส่งข้อความออกทันที";
+                    btn.disabled = false;
+                }, function(error) {
+                    alert('💡 ระบบร่างข้อความพร้อมส่งเรียบร้อย! (คุณต้องลงทะเบียนและตั้งค่า Service ID, Template ID และ Public Key ใน EmailJS ให้ถูกต้องก่อน ข้อความจึงจะวิ่งเข้ากล่อง Gmail จริงครับ)');
+                    btn.innerText = "ส่งข้อความออกทันที";
+                    btn.disabled = false;
+                });
+        }
+
         window.onload = init;
     </script>
 </body>
