@@ -455,43 +455,19 @@
 
     <script>
         const products = [
-            { id: 101, cat: "cat-1", n: "ตัวจับยึดแผ่นตัวกลาง 35-40 มม.", p: "33.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf6i0rqbCJqUOhYb505iEVICZjW6BSVjl6AQ&s", d: "อุปกรณ์จับยึดแผงโซลาร์เซลล์ระหว่างกลางแผ่น แข็งแรง ทนทาน", url: "contact.html" },
-            { id: 102, cat: "cat-1", n: "ตัวจับยึดแผ่นตัวข้าง 35-40 มม.", p: "33.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTZhluQ8SC2W9eym5uix-BKmhPcr-bC-glDQ&s", d: "อุปกรณ์จับยึดแผงโซลาร์เซลล์ริมขอบแผ่น แข็งแรง ทนทาน", url: "contact.html" },
-            { id: 103, cat: "cat-1", n: "เบรกเกอร์ DC 1P 10A 500V", p: "130.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7pNWR73FUgIeuSY-2usl4DwKcH6Mf8MPzdg&s", d: "อุปกรณ์ตัดวงจรไฟฟ้ากระแสตรง DC ป้องกันกระแสลัดวงจร", url: "contact.html" },
-            { id: 104, cat: "cat-1", n: "เบรกเกอร์ DC 1P 16A 500V", p: "130.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7pNWR73FUgIeuSY-2usl4DwKcH6Mf8MPzdg&s", d: "อุปกรณ์ตัดวงจรไฟฟ้ากระแสตรง DC ป้องกันกระแสลัดวงจร", url: "contact.html" },
-            { id: 105, cat: "cat-1", n: "เบรกเกอร์ DC 1P 20A 500V", p: "130.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7pNWR73FUgIeuSY-2usl4DwKcH6Mf8MPzdg&s", d: "อุปกรณ์ตัดวงจรไฟฟ้ากระแสตรง DC ป้องกันกระแสลัดวงจร", url: "contact.html" },
-            { id: 106, cat: "cat-1", n: "เบรกเกอร์ DC 1P 32A 500V", p: "130.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7pNWR73FUgIeuSY-2usl4DwKcH6Mf8MPzdg&s", d: "อุปกรณ์ตัดวงจรไฟฟ้ากระแสตรง DC ป้องกันกระแสลัดวงจร", url: "contact.html" },
-            { id: 107, cat: "cat-1", n: "เบรกเกอร์ DC 1P 50A 500V", p: "150.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7pNWR73FUgIeuSY-2usl4DwKcH6Mf8MPzdg&s", d: "อุปกรณ์ตัดวงจรไฟฟ้ากระแสตรง DC ป้องกันกระแสลัดวงจร", url: "contact.html" },
-            { id: 108, cat: "cat-1", n: "เบรกเกอร์ DC 1P 63A 500V", p: "150.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7pNWR73FUgIeuSY-2usl4DwKcH6Mf8MPzdg&s", d: "อุปกรณ์ตัดวงจรไฟฟ้ากระแสตรง DC ป้องกันกระแสลัดวงจร", url: "contact.html" },
-            { id: 109, cat: "cat-1", n: "เบรกเกอร์ DC 2P 16A 500V", p: "298.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqFYW-rv5pBF5VNeb9EKlV3bl14t0YkO8nQw&s", d: "เบรกเกอร์ DC 2 พูล ป้องกันความเสียหายระบบโซลาร์", url: "contact.html" },
-            { id: 110, cat: "cat-1", n: "เบรกเกอร์ DC 2P 20A 500V", p: "298.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqFYW-rv5pBF5VNeb9EKlV3bl14t0YkO8nQw&s", d: "เบรกเกอร์ DC 2 พูล ป้องกันความเสียหายระบบโซลาร์", url: "contact.html" },
-            { id: 111, cat: "cat-1", n: "เบรกเกอร์ DC 2P 32A 500V", p: "298.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqFYW-rv5pBF5VNeb9EKlV3bl14t0YkO8nQw&s", d: "เบรกเกอร์ DC 2 พูล ป้องกันความเสียหายระบบโซลาร์", url: "contact.html" },
-            { id: 112, cat: "cat-1", n: "เบรกเกอร์ DC 2P 50A 500V", p: "298.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqFYW-rv5pBF5VNeb9EKlV3bl14t0YkO8nQw&s", d: "เบรกเกอร์ DC 2 พูล ป้องกันความเสียหายระบบโซลาร์", url: "contact.html" },
-            { id: 113, cat: "cat-1", n: "ลูกฟิวส์ DC FUSE 15A 1000V", p: "43.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9AZ6zaqFWNQAl3iUmD5eAOkuxeSjy-LhqrQ&s", d: "ลูกฟิวส์ป้องกันระบบไฟและอินเวอร์เตอร์จากโซลาร์เซลล์", url: "contact.html" },
-            { id: 114, cat: "cat-1", n: "ลูกฟิวส์ DC FUSE 20A 1000V", p: "48.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9AZ6zaqFWNQAl3iUmD5eAOkuxeSjy-LhqrQ&s", d: "ลูกฟิวส์ป้องกันระบบไฟและอินเวอร์เตอร์จากโซลาร์เซลล์", url: "contact.html" },
-            { id: 115, cat: "cat-1", n: "ลูกฟิวส์ DC FUSE 30A 1000V", p: "67.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9AZ6zaqFWNQAl3iUmD5eAOkuxeSjy-LhqrQ&s", d: "ลูกฟิวส์ป้องกันระบบไฟและอินเวอร์เตอร์จากโซลาร์เซลล์", url: "contact.html" },
+            { id: 101, cat: "cat-1", n: "เทอร์มินอลบ็อค 3P 100A 600V", p: "60.00", i: "https://pim-cdn0.ofm.co.th/products/original/YA67434.jpg?v=20261027&x-image-process=image/format,webp", d: "เทอร์มินอลบล็อกแผงต่อสายไฟ ขนาด 100A 600V", url: "contact.html" },
+            { id: 102, cat: "cat-1", n: "เทอร์มินอลบ็อค 4P 100A 600V", p: "70.00", i: "https://pim-cdn0.ofm.co.th/products/large/YB86209.jpg", d: "เทอร์มินอลบล็อกแผงต่อสายไฟ ขนาด 100A 600V", url: "contact.html" },
+            { id: 103, cat: "cat-1", n: "เทอร์มินอลบ็อค 5P 100A 600V", p: "130.00", i: "https://pim-cdn0.ofm.co.th/products/original/YB86219.jpg?v=20261113&x-image-process=image/format,webp/resize,m_fixed,w_400,h_400/quality,q_100/marker,u_plus/sharpen,50", d: "เทอร์มินอลบล็อกแผงต่อสายไฟ ขนาด 100A 600V", url: "contact.html" },
+            { id: 104, cat: "cat-1", n: "เทอร์มินอลบ็อค 3P 60A 600V", p: "130.00", i: "https://pim-cdn0.ofm.co.th/products/original/YA67434.jpg?x-image-process=image/format,webp/resize,m_fixed,w_150,h_150/quality,q_90", d: "เทอร์มินอลบล็อกแผงต่อสายไฟ ขนาด 60A 600V", url: "contact.html" },
+            { id: 105, cat: "cat-1", n: "เทอร์มินอลบ็อค 4P 60A 600V", p: "130.00", i: "https://pim-cdn0.ofm.co.th/products/original/YB75995.jpg?x-image-process=image/format,webp/resize,m_fixed,w_150,h_150/quality,q_90", d: "เทอร์มินอลบล็อกแผงต่อสายไฟ ขนาด 60A 600V", url: "contact.html" },
+            { id: 106, cat: "cat-1", n: "เทอร์มินอลบ็อค 5P 60A 600V", p: "130.00", i: "https://pim-cdn0.ofm.co.th/products/original/YB76003.jpg?x-image-process=image/format,webp/resize,m_fixed,w_150,h_150/quality,q_90", d: "เทอร์มินอลบล็อกแผงต่อสายไฟ ขนาด 60A 600V", url: "contact.html" },
+            { id: 107, cat: "cat-1", n: "เทอร์มินอลบ็อค 6P 60A 600V", p: "150.00", i: "https://pim-cdn0.ofm.co.th/products/original/YA39865.jpg?x-image-process=image/format,webp/resize,m_fixed,w_150,h_150/quality,q_90", d: "เทอร์มินอลบล็อกแผงต่อสายไฟ ขนาด 60A 600V", url: "contact.html" },
+            { id: 108, cat: "cat-1", n: "เทอร์มินอลบ็อค 8P 60A 600V", p: "150.00", i: "https://pim-cdn0.ofm.co.th/products/original/YA67428.jpg?x-image-process=image/format,webp/resize,m_fixed,w_150,h_150/quality,q_90", d: "เทอร์มินอลบล็อกแผงต่อสายไฟ ขนาด 60A 600V", url: "contact.html" },
             
-            { id: 201, cat: "cat-2", n: "แบตเตอรี่ ไฮบริดเจล 12V 7.2A", p: "750.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeckNXI6xOnHrzppBD2yX47ey0X2BxA0s_tw&s", d: "แบตเตอรี่ไฮบริดเจลประสิทธิภาพการชาร์จสูง อายุยาวนาน", url: "contact.html" },
-            { id: 202, cat: "cat-2", n: "แบตเตอรี่ ไฮบริดเจล 12V 12A", p: "1,100.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeckNXI6xOnHrzppBD2yX47ey0X2BxA0s_tw&s", d: "แบตเตอรี่ไฮบริดเจลประสิทธิภาพการชาร์จสูง อายุยาวนาน", url: "contact.html" },
-            { id: 203, cat: "cat-2", n: "แบตเตอรี่สำรองพกพา 200W", p: "2,988.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjJRbygv4G19p1a2NY7_gYKLZiEWcdV34opw&s", d: "แบตเตอรี่พกพาสำหรับกิจกรรมกลางแจ้งและกรณีฉุกเฉิน", url: "contact.html" },
-            { id: 204, cat: "cat-2", n: "แบตเตอรี่ลิเธียมฟอสเฟต 48V 20Ah", p: "13,480.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5xZuex_EzuULxWzuqihXchGez5AS3Ipp7qw&s", d: "ลิเธียมฟอสเฟตจ่ายไฟเสถียร น้ำหนักเบา ปลอดภัยสูง", url: "contact.html" },
-            { id: 205, cat: "cat-2", n: "แบตเตอรี่ลิเธียมฟอสเฟต 48V 100Ah", p: "45,000.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4vbSaU8H1X38d1opUw0CjQ6_xEYbGXgV65A&s", d: "ลิเธียมฟอสเฟตความจุสูงพิเศษ เหมาะสำหรับระบบใหญ่", url: "contact.html" },
             
-            { id: 301, cat: "cat-3", n: "โซลาร์ชาร์จเจอร์ PWM 12V/24V 20A", p: "680.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_o15W6ychp8x0DINneo22pR1cuNpIfH3QVQ&s", d: "ควบคุมการชาร์จระบบ Off-Grid ยืดอายุแบตเตอรี่", url: "contact.html" },
-            { id: 302, cat: "cat-3", n: "โซล่าชาร์จเจอร์ MPPT 12V/24V 20A", p: "2,130.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpipKQDUfFYluWEB26RlHb33pctflNFgjPOw&s", d: "ระบบ MPPT ชาร์จไฟดีกว่าระบบทั่วไป 20-50%", url: "contact.html" },
-            { id: 303, cat: "cat-3", n: "โซลาร์ชาร์จเจอร์ MPPT 40A", p: "7,430.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTReCPv20YLBQBsrmuDxRyFlACvZ1qVAxaPzw&s", d: "ตัวควบคุมการชาร์จอัจฉริยะประสิทธิภาพสูง รองรับกระแส 40A", url: "contact.html" },
-            
-            { id: 401, cat: "cat-4", n: "ขั้วต่อสาย MC4 2 ออก 1 (คู่)", p: "127.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMiWf8kPSr-nv-85gt9Yu_iUVjId00s8mExg&s", d: "ขั้วต่อสาย Y เชื่อมต่อแผงแบบขนาน แข็งแรงแน่นหนา", url: "contact.html" },
-            { id: 402, cat: "cat-4", n: "ขั้วต่อสาย MC4 4 ออก 1 (คู่)", p: "280.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9-GL6-7Psf09JyZVYGr8DhW2XKORb87S-XQ&s", d: "ขั้วต่อสาย Y รองรับการต่อขนาน 4 แผง ปลอดภัย", url: "contact.html" },
-            { id: 403, cat: "cat-4", n: "ขั้วต่อสาย MC4 3 ออก 1 (คู่)", p: "197.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAA1u7Ro0IedAwFKky9byuKajfgp_Z1wKUjw&s", d: "ขั้วต่อสาย Y รองรับการต่อขนาน 3 แผง มาตรฐานพรีเมียม", url: "contact.html" },
-            { id: 404, cat: "cat-4", n: "ข้อต่อ MC4 2 ทาง", p: "153.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA3Qnwukt-MGXFF-3Y38OS_izsZoDDIGPkDA&s", d: "หัวต่อสายไฟโซลาร์เซลล์ผู้-เมีย พลาสติกไม่ลามไฟ ทนทาน", url: "contact.html" },
-            
-            { id: 501, cat: "cat-5", n: "สายโซลาร์เซลล์ 100 เมตร (แดง)", p: "2,980.00", i: "https://www.thaiwatsadu.com/_next/image?url=https%3A%2F%2Fpim.thaiwatsadu.com%2FTWDPIM%2Fweb%2FThumbnail%2FImage%2F0202%2F60439284.jpg&w=640&q=75", d: "สายไฟระบบโซลาร์เซลล์โดยเฉพาะ ฉนวนกันความร้อน XLPO", url: "contact.html" },
-            { id: 502, cat: "cat-5", n: "สายโซลาร์เซลล์ 100 เมตร (ดำ)", p: "2,980.00", i: "https://www.thaiwatsadu.com/_next/image?url=https%3A%2F%2Fpim.thaiwatsadu.com%2FTWDPIM%2Fweb%2FThumbnail%2FImage%2F0202%2F60439285.jpg&w=640&q=75", d: "สายไฟระบบโซลาร์เซลล์โดยเฉพาะ ฉนวนกันความร้อน XLPO", url: "contact.html" },
-            { id: 503, cat: "cat-5", n: "สายพ่วงโซลาร์เซลล์ 5 เมตร 4 ตร.มม.", p: "330.00", i: "https://www.thaiwatsadu.com/_next/image?url=https%3A%2F%2Fpim.thaiwatsadu.com%2FTWDPIM%2Fweb%2FThumbnail%2FImage%2F0202%2F60331942r1.jpg&w=640&q=75", d: "สายพ่วงสำเร็จรูปเข้าหัว MC4 นำกระแสไฟฟ้าได้เป็นอย่างดี", url: "contact.html" },
-            { id: 504, cat: "cat-5", n: "สายพ่วงโซลาร์เซลล์ 2 เมตร 6 ตร.มม.", p: "270.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo8KKEN3AuUy9yI6nYG0FlDnYL2pPYQyrwZw&s", d: "สายพ่วงขนาดใหญ่สำเร็จรูป นำไฟฟ้าดีเยี่ยม ปลอดภัยสูง", url: "contact.html" },
-            { id: 505, cat: "cat-5", n: "สายไฟโซลาร์เซลล์ 6 ตร.มม. (ต่อเมตร)", p: "38.00", i: "https://www.thaiwatsadu.com/_next/image?url=https%3A%2F%2Fpim.thaiwatsadu.com%2FTWDPIM%2Fweb%2FThumbnail%2FImage%2F0202%2F60365337.jpg&w=640&q=75", d: "สายไฟตัดขายตามเมตร ทองแดงชุบดีบุกนำไฟฟ้าดี ทนร้อนสูง", url: "contact.html" },
-            { id: 506, cat: "cat-5", n: "สายไฟโซลาร์เซลล์ 4 ตร.มม. (ต่อเมตร)", p: "38.00", i: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvN6swwRm6RhXl-FRmTekF1zct_82ULj2I6w&s", d: "สายไฟตัดขายตามเมตร ทองแดงชุบดีบุกนำไฟฟ้าดี ทนร้อนสูง", url: "contact.html" },
+            { id: 201, cat: "cat-2", n: "Switching Power Supply 12v20a", p: "500.00", i: "https://i.postimg.cc/GmxZdsM6/Screenshot-2026-11-11-121610.png", d: "เพาเวอร์ซัพพลาย หม้อเเปลงไฟฟ้า", url: "contact.html" },
+            { id: 202, cat: "cat-2", n: "Switching Power Supply 12v20a", p: "500.00", i: "https://i.postimg.cc/9QYvCqx6/switching-Glink-12v-20A.jpg", d: "เพาเวอร์ซัพพลาย หม้อเเปลงไฟฟ้า", url: "contact.html" },
+
             
             { id: 601, cat: "cat-6", n: "วงจรลดแรงดัน DC-DC 600W 25A", p: "480.00", i: "https://down-th.img.susercontent.com/file/th-11134207-7r98r-lug8x0te8yem4a", d: "โมดูล Buck Converter สำหรับปรับลดแรงดันไฟฟ้ากระแสสูง", url: "contact.html" },
 
@@ -554,11 +530,8 @@
 
 
         const sections = [
-            { id: "cat-1", title: "อุปกรณ์ โซล่าเซล" },
-            { id: "cat-2", title: "แบตเตอรี่" },
-            { id: "cat-3", title: "เพียวไซต์อินเวอเตอร์" },
-            { id: "cat-4", title: "ปลั๊กไฟ / เทอมินอล" },
-            { id: "cat-5", title: "สาย PV โซล่าเซล" },
+            { id: "cat-1", title: "ปลั๊กไฟ/เทอมินอล" },
+            { id: "cat-2", title: "พาวเวอร์ซัพพลาย" },
             { id: "cat-6", title: "แผงวงจรลดเพิ่มแรงดัน" },
             { id: "cat-7", title: "รับติดตั้งโซล่าเซลล์" },
             { id: "cat-8", title: "บ้านและสวน" },
@@ -574,14 +547,14 @@
                 // 🟠 จุดที่ 1: พ่วงป้ายไฟส้มนีออนกระพริบตัวเล็ก ที่เมนูย่อย Sidebar ฝั่งซ้าย
                 let sidebarTitle = sec.title;
                 if(sec.id === 'cat-trend') {
-                    sidebarTitle += ` <span class="neon-update-badge" style="font-size: 0.65rem; padding: 2px 7px; border-radius: 30px;">Update: 01/08/2026</span>`;
+                    sidebarTitle += ` <span class="neon-update-badge" style="font-size: 0.65rem; padding: 2px 7px; border-radius: 30px;">Update: 13/11/2026</span>`;
                 }
                 sidebar.innerHTML += `<a href="#${sec.id}" class="sidebar-link d-flex align-items-center flex-wrap">${sidebarTitle}</a>`;
                 
                 // 🟠 จุดที่ 2: พ่วงป้ายไฟส้มนีออนกระพริบอันใหญ่ คู่กับหัวข้อหลัก TREND MARKET ด้านขวา
                 let mainTitle = sec.title;
                 if(sec.id === 'cat-trend') {
-                    mainTitle += ` <span class="neon-update-badge" style="font-size: 0.9rem; padding: 4px 12px; border-radius: 30px; margin-left: 12px;">Update: 01/08/2026</span>`;
+                    mainTitle += ` <span class="neon-update-badge" style="font-size: 0.9rem; padding: 4px 12px; border-radius: 30px; margin-left: 12px;">Update: 13/11/2026</span>`;
                 }
 
                 const items = products.filter(p => p.cat === sec.id);
